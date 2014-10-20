@@ -1,0 +1,41 @@
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\bin\Debug\Controle de consultorio_odonto.exe
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\bin\Debug\Controle de consultorio_odonto.pdb
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.tela_main.resources
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Properties.Resources.resources
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.exe
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.pdb
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Agendador_consulta.resources
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_paciente.resources
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_servicos.resources
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_profss.resources
+E:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.exe
+E:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.pdb
+E:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\bin\Debug\Controle de consultorio_odonto.exe
+E:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\bin\Debug\Controle de consultorio_odonto.pdb
+E:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Agendador_consulta.resources
+E:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_profss.resources
+E:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_paciente.resources
+E:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_servicos.resources
+E:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Tela_main.resources
+E:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Properties.Resources.resources
+E:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.TelaLista.resources
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\bin\Debug\MySql.Data.dll
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.exe
+C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.pdb
+C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Controle de consultorio_odonto\bin\Debug\Controle de consultorio_odonto.exe
+C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Controle de consultorio_odonto\bin\Debug\Controle de consultorio_odonto.pdb
+C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.csprojResolveAssemblyReference.cache
+C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Agendador_consulta.resources
+C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_profss.resources
+C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_paciente.resources
+C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_servicos.resources
+C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Tela_main.resources
+C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Properties.Resources.resources
+C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.TelaLista.resources
+C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.csproj.GenerateResource.Cache

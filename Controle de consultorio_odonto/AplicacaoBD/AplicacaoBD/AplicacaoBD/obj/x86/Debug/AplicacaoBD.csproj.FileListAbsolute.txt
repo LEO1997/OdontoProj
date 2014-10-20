@@ -1,0 +1,11 @@
+C:\AulasLP3\AplicacaoBD\AplicacaoBD\bin\Debug\AplicacaoBD.exe
+C:\AulasLP3\AplicacaoBD\AplicacaoBD\bin\Debug\AplicacaoBD.pdb
+C:\AulasLP3\AplicacaoBD\AplicacaoBD\obj\x86\Debug\AplicacaoBD.Form1.resources
+C:\AulasLP3\AplicacaoBD\AplicacaoBD\obj\x86\Debug\AplicacaoBD.Properties.Resources.resources
+C:\AulasLP3\AplicacaoBD\AplicacaoBD\obj\x86\Debug\AplicacaoBD.csproj.GenerateResource.Cache
+C:\AulasLP3\AplicacaoBD\AplicacaoBD\obj\x86\Debug\AplicacaoBD.exe
+C:\AulasLP3\AplicacaoBD\AplicacaoBD\obj\x86\Debug\AplicacaoBD.pdb
+C:\AulasLP3\AplicacaoBD\AplicacaoBD\obj\x86\Debug\AplicacaoBD.csprojResolveAssemblyReference.cache
+C:\AulasLP3\AplicacaoBD\AplicacaoBD\obj\x86\Debug\AplicacaoBD.frmPrincipal.resources
+C:\Users\01aluno\Desktop\AplicacaoBD\AplicacaoBD\AplicacaoBD\obj\x86\Debug\AplicacaoBD.exe
+C:\Users\01aluno\Desktop\AplicacaoBD\AplicacaoBD\AplicacaoBD\obj\x86\Debug\AplicacaoBD.pdb

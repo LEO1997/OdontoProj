@@ -1,0 +1,12 @@
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\bin\Release\Controle de consultorio_odonto.exe
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\bin\Release\Controle de consultorio_odonto.pdb
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Release\Controle_de_consultorio_odonto.Agendador_consulta.resources
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Release\Controle_de_consultorio_odonto.Cadastro_profss.resources
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Release\Controle_de_consultorio_odonto.Cadastro_paciente.resources
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Release\Controle_de_consultorio_odonto.Cadastro_servicos.resources
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Release\Controle_de_consultorio_odonto.Consulta_servico.resources
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Release\Controle_de_consultorio_odonto.Tela_main.resources
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Release\Controle_de_consultorio_odonto.Properties.Resources.resources
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Release\Controle de consultorio_odonto.csproj.GenerateResource.Cache
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Release\Controle de consultorio_odonto.exe
+F:\Local 1\Trabalhos\Projs APV\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Release\Controle de consultorio_odonto.pdb
