@@ -41,3 +41,5 @@ C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Contro
 C:\Users\leonp_000\Documents\ProjetoOdonto\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.csproj.GenerateResource.Cache
 C:\Users\leonp_000\Documents\Projetos com git\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.exe
 C:\Users\leonp_000\Documents\Projetos com git\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.pdb
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.exe
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.pdb

@@ -1,0 +1,14 @@
+
+git add "arquivo.extensão" (adiciona um arquivo do diretório master no índice)
+
+git add . (adiciona todos os arquivos do diretório master no índice)
+
+git commit -m "mensagem" (realiza o commit com os arquivos do índice)
+
+
+
+git remote add origin <git@github.com:seu_logi/nome_do_projeto.git> (adicionando url de repositório remoto)
+
+git remote set-url origin git://new.url.here (alterando url de origem)
+
+git remote remove origin (removendo origem de remoto) 
