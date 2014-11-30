@@ -74,30 +74,16 @@ namespace Controle_de_consultorio_odonto
                 }
                 textBoxServ.Text = "";
             }
-        }
-
-        private void buttonConsulta_Click(object sender, EventArgs e)
-        {
-            DaoConsulta daoCons = new DaoConsulta();
-            ArrayList arry = daoCons.getConsulta(textBoxConsulta.Text);
-            if (arry.Count == 0)
-            {
-                MessageBox.Show("Consulta inexistente.");
-                textBoxConsulta.Text = "";
-            }
-            else
-            {
-                foreach (string i in arry)
-                {
-                    MessageBox.Show(i);
-                }
-                textBoxConsulta.Text = "";
-            }
-        }
+        }        
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void textBoxConsulta_TextChanged(object sender, EventArgs e)
+        {
+
         }
         
     }

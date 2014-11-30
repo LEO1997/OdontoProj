@@ -31,12 +31,7 @@ namespace Controle_de_consultorio_odonto
             DaoServico daoServ = new DaoServico();
             ComboBox combserv1 = comboBoxServ1;
             combserv1.DataSource = daoServ.listar();//Pega as instâncias de Servico.            
-            combserv1.DisplayMember = "descricao";//Exibe apenas o valor de descricao das instâncias.
-            DaoServico daoServ2 = new DaoServico();
-            ComboBox combserv2 = comboBoxServ2;
-            combserv2.DataSource = daoServ.listar();//Pega as instâncias de Servico.
-            combserv2.DisplayMember = "descricao";//Exibe apenas o valor de descricao das instâncias. 
-            //Recebe valores das entidades do banco e exibe nas devidas comboboxes.
+            combserv1.DisplayMember = "descricao";//Exibe apenas o valor de descricao das instâncias.            
         }
 
         private void buttonAgendar_Click(object sender, EventArgs e)
@@ -84,36 +79,12 @@ namespace Controle_de_consultorio_odonto
                 myConsulta.PrecoTotal = 0.50;//Taxa inicial da consulta;
                 DaoConsulta daoconsulta = new DaoConsulta();
                  daoconsulta.Save(myConsulta);//Cadastra a consulta no bd.
-
-                DaoServHasCons daoSHC = new DaoServHasCons();
-                 if (myShc2.Equals(""))//Se a combobox de servico 2 não tiver nenhum valor visível.
-                 {
+                
+                 
                      myShc1.HoraConsulta = dtaHrS;
-                     myShc1.DescServico = servico1;
-                     daoSHC.Save(myShc1);//Vincula a consulta com o 1° serviço.
+                     myShc1.DescServico = servico1;                     
                      daoconsulta.adicionaPreco(servico1, dtaHrS);//Adiciona o preço do primeiro serviço à consulta.
-                 }
-                 else
-                 {
-                     if (myShc1.Equals(""))//Se a combobox de servico 1 não tiver nenhum valor visível.
-                     {
-                         myShc2.HoraConsulta = dtaHrS;
-                         myShc2.DescServico = servico2;
-                         daoSHC.Save(myShc2);//Vincula a consulta com o 2° serviço.
-                         daoconsulta.adicionaPreco(servico2, dtaHrS);//Adiciona o preço do segundo serviço à consulta.
-                     }
-                     else//Se ambas apresentarem valores visíveis.
-                     {
-                         myShc1.HoraConsulta = dtaHrS;
-                         myShc1.DescServico = servico1;
-                         myShc2.HoraConsulta = dtaHrS;
-                         myShc2.DescServico = servico2;
-                         daoSHC.Save(myShc1);//Vincula a consulta com o 1° serviço.
-                         daoSHC.Save(myShc2);//Vincula a consulta com o 2° serviço.
-                         daoconsulta.adicionaPreco(servico1, dtaHrS);//Adiciona o preço do primeiro serviço à consulta.
-                         daoconsulta.adicionaPreco(servico2, dtaHrS);//Adiciona o preço do segundo serviço à consulta.
-                     }
-                 }
+                                                  
                 
                 MessageBox.Show("Dados salvos corretamente.");
                 this.Dispose();

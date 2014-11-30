@@ -15,7 +15,7 @@ namespace Controle_de_consultorio_odonto.DAO
 
         public DaoPaciente()
         {
-            String conexao = "server=localhost;userid=root;password=;database=Consultorio_odonto;";
+            String conexao = "server=localhost;userid=root;password=superiorclock;database=Consultorio_odonto;";
             
             mycon = new MySqlConnection(conexao);
         }

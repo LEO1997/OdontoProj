@@ -43,3 +43,15 @@ C:\Users\leonp_000\Documents\Projetos com git\Controle de consultorio_odonto\Con
 C:\Users\leonp_000\Documents\Projetos com git\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.pdb
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.exe
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.pdb
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.csprojResolveAssemblyReference.cache
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Agendador_consulta.resources
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_profss.resources
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_paciente.resources
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_servicos.resources
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Tela_main.resources
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Properties.Resources.resources
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.TelaLista.resources
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.csproj.GenerateResource.Cache
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Formularios.PasswordScrn.resources
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\bin\Debug\Controle de consultorio_odonto.exe
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\bin\Debug\Controle de consultorio_odonto.pdb

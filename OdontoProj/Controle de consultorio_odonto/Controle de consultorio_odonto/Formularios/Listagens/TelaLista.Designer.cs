@@ -34,18 +34,14 @@
             this.textBoxProf = new System.Windows.Forms.TextBox();
             this.buttonProf = new System.Windows.Forms.Button();
             this.textBoxServ = new System.Windows.Forms.TextBox();
-            this.textBoxConsulta = new System.Windows.Forms.TextBox();
             this.buttonServ = new System.Windows.Forms.Button();
-            this.buttonConsulta = new System.Windows.Forms.Button();
             this.groupBoxPac = new System.Windows.Forms.GroupBox();
             this.groupBoxProf = new System.Windows.Forms.GroupBox();
             this.groupBoxServ = new System.Windows.Forms.GroupBox();
-            this.groupBoxConsulta = new System.Windows.Forms.GroupBox();
             this.buttonBack = new System.Windows.Forms.Button();
             this.groupBoxPac.SuspendLayout();
             this.groupBoxProf.SuspendLayout();
             this.groupBoxServ.SuspendLayout();
-            this.groupBoxConsulta.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxPac
@@ -97,15 +93,6 @@
             this.textBoxServ.Size = new System.Drawing.Size(297, 20);
             this.textBoxServ.TabIndex = 6;
             // 
-            // textBoxConsulta
-            // 
-            this.textBoxConsulta.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBoxConsulta.Location = new System.Drawing.Point(6, 19);
-            this.textBoxConsulta.MaxLength = 50;
-            this.textBoxConsulta.Name = "textBoxConsulta";
-            this.textBoxConsulta.Size = new System.Drawing.Size(297, 20);
-            this.textBoxConsulta.TabIndex = 7;
-            // 
             // buttonServ
             // 
             this.buttonServ.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -116,17 +103,6 @@
             this.buttonServ.Text = "Pesquisar";
             this.buttonServ.UseVisualStyleBackColor = true;
             this.buttonServ.Click += new System.EventHandler(this.buttonServ_Click);
-            // 
-            // buttonConsulta
-            // 
-            this.buttonConsulta.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.buttonConsulta.Location = new System.Drawing.Point(115, 45);
-            this.buttonConsulta.Name = "buttonConsulta";
-            this.buttonConsulta.Size = new System.Drawing.Size(75, 23);
-            this.buttonConsulta.TabIndex = 9;
-            this.buttonConsulta.Text = "Pesquisar";
-            this.buttonConsulta.UseVisualStyleBackColor = true;
-            this.buttonConsulta.Click += new System.EventHandler(this.buttonConsulta_Click);
             // 
             // groupBoxPac
             // 
@@ -164,22 +140,10 @@
             this.groupBoxServ.TabStop = false;
             this.groupBoxServ.Text = "Pesquisar serviço";
             // 
-            // groupBoxConsulta
-            // 
-            this.groupBoxConsulta.Controls.Add(this.buttonConsulta);
-            this.groupBoxConsulta.Controls.Add(this.textBoxConsulta);
-            this.groupBoxConsulta.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.groupBoxConsulta.Location = new System.Drawing.Point(12, 285);
-            this.groupBoxConsulta.Name = "groupBoxConsulta";
-            this.groupBoxConsulta.Size = new System.Drawing.Size(311, 80);
-            this.groupBoxConsulta.TabIndex = 13;
-            this.groupBoxConsulta.TabStop = false;
-            this.groupBoxConsulta.Text = "Pesquisar consultas de paciente";
-            // 
             // buttonBack
             // 
             this.buttonBack.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.buttonBack.Location = new System.Drawing.Point(127, 388);
+            this.buttonBack.Location = new System.Drawing.Point(127, 307);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(75, 23);
             this.buttonBack.TabIndex = 14;
@@ -192,9 +156,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(336, 423);
+            this.ClientSize = new System.Drawing.Size(336, 349);
             this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.groupBoxConsulta);
             this.Controls.Add(this.groupBoxServ);
             this.Controls.Add(this.groupBoxProf);
             this.Controls.Add(this.groupBoxPac);
@@ -210,8 +173,6 @@
             this.groupBoxProf.PerformLayout();
             this.groupBoxServ.ResumeLayout(false);
             this.groupBoxServ.PerformLayout();
-            this.groupBoxConsulta.ResumeLayout(false);
-            this.groupBoxConsulta.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -223,13 +184,10 @@
         private System.Windows.Forms.TextBox textBoxProf;
         private System.Windows.Forms.Button buttonProf;
         private System.Windows.Forms.TextBox textBoxServ;
-        private System.Windows.Forms.TextBox textBoxConsulta;
         private System.Windows.Forms.Button buttonServ;
-        private System.Windows.Forms.Button buttonConsulta;
         private System.Windows.Forms.GroupBox groupBoxPac;
         private System.Windows.Forms.GroupBox groupBoxProf;
         private System.Windows.Forms.GroupBox groupBoxServ;
-        private System.Windows.Forms.GroupBox groupBoxConsulta;
         private System.Windows.Forms.Button buttonBack;
     }
 }
