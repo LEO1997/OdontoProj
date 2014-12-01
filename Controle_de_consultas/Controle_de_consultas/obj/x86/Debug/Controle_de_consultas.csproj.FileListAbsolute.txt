@@ -1,8 +1,0 @@
-C:\Users\leonp_000\Documents\Projetos com git\Controle_de_consultas\Controle_de_consultas\bin\Debug\Controle_de_consultas.exe
-C:\Users\leonp_000\Documents\Projetos com git\Controle_de_consultas\Controle_de_consultas\bin\Debug\Controle_de_consultas.pdb
-C:\Users\leonp_000\Documents\Projetos com git\Controle_de_consultas\Controle_de_consultas\obj\x86\Debug\Controle_de_consultas.InitScrn.resources
-C:\Users\leonp_000\Documents\Projetos com git\Controle_de_consultas\Controle_de_consultas\obj\x86\Debug\Controle_de_consultas.Properties.Resources.resources
-C:\Users\leonp_000\Documents\Projetos com git\Controle_de_consultas\Controle_de_consultas\obj\x86\Debug\Controle_de_consultas.csproj.GenerateResource.Cache
-C:\Users\leonp_000\Documents\Projetos com git\Controle_de_consultas\Controle_de_consultas\obj\x86\Debug\Controle_de_consultas.exe
-C:\Users\leonp_000\Documents\Projetos com git\Controle_de_consultas\Controle_de_consultas\obj\x86\Debug\Controle_de_consultas.pdb
-C:\Users\leonp_000\Documents\Projetos com git\Controle_de_consultas\Controle_de_consultas\obj\x86\Debug\Controle_de_consultas.formularios.PasswordScrn.resources
