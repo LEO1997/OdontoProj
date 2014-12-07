@@ -91,6 +91,12 @@
     <Compile Include="DAO\DaoPaciente.cs" />
     <Compile Include="DAO\DaoProf.cs" />
     <Compile Include="DAO\DaoServico.cs" />
+    <Compile Include="Formularios\Listagens\ListScrn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listagens\ListScrn.Designer.cs">
+      <DependentUpon>ListScrn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Sistema\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cadastros\Cadastro_servicos.resx">
       <DependentUpon>Cadastro_servicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listagens\ListScrn.resx">
+      <DependentUpon>ListScrn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Sistema\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

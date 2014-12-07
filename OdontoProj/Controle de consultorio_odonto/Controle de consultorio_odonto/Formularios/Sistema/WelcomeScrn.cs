@@ -18,7 +18,7 @@ namespace Controle_de_consultorio_odonto.Formularios.Sistema
 
         private void WelcomeScrn_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

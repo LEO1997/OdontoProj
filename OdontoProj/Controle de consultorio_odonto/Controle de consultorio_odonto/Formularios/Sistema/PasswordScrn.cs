@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using Controle_de_consultorio_odonto.DAO;
+using Controle_de_consultorio_odonto.Formularios.Sistema;
 
 namespace Controle_de_consultorio_odonto.Formularios
 {
@@ -36,13 +37,21 @@ namespace Controle_de_consultorio_odonto.Formularios
             }
             catch
             {
-                MessageBox.Show("Conexão não estabelecida \n por favor tente novamente");
+                MessageBox.Show("SENHA DE ACESSO INCORRETA");
+                textBoxPass.Text = "";
+                textBoxPass.Focus();
             }
 
             if (mycon.State == ConnectionState.Open)
-            {
-                DataStore.Password = password;
+            {                
                 DataStore.Conexao = conexao;
+                
+                this.Hide();
+
+                WelcomeScrn ws = new WelcomeScrn();
+                 ws.ShowDialog();
+
+                this.Close();
                 this.Dispose();
             }          
         }
