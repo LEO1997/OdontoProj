@@ -15,7 +15,7 @@ namespace Controle_de_consultorio_odonto.DAO
 
         public DaoConsulta()
         {
-            String conexao = "server=localhost;userid=root;password=superiorclock;database=Consultorio_odonto;";
+            String conexao = DataStore.Conexao;
             
             mycon = new MySqlConnection(conexao);           
         }
@@ -60,7 +60,7 @@ namespace Controle_de_consultorio_odonto.DAO
             MySqlDataReader dr4;
             ArrayList array = new ArrayList();
 
-            strconexao = "server=localhost;userid=root;password=;database=Consultorio_odonto";
+            strconexao = DataStore.Conexao;
             
 
             MySqlConnection con = new MySqlConnection(strconexao);       

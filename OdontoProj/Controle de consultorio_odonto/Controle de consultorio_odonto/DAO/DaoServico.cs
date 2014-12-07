@@ -15,7 +15,7 @@ namespace Controle_de_consultorio_odonto.DAO
 
         public DaoServico()
         {
-            String conexao = "server=localhost;userid=root;password=superiorclock;database=consultorio_odonto";
+            String conexao = DataStore.Conexao;
            
             mycon = new MySqlConnection(conexao);           
         }
@@ -40,7 +40,7 @@ namespace Controle_de_consultorio_odonto.DAO
             MySqlDataReader dr;//Variável que indentifica cada instância da entidade e armazena seus valores.
             ArrayList array = new ArrayList();//arraylist para retorno dos valores(nomes).
 
-            strconexao = "server=localhost;userid=root;password=;database=Consultorio_odonto";
+            strconexao = DataStore.Conexao;
             //strconexao = "server=localhost;userid=root;password=superiorclock;database=Consultorio_odonto;";
             MySqlConnection con = new MySqlConnection(strconexao);
             con.Open();
@@ -63,8 +63,7 @@ namespace Controle_de_consultorio_odonto.DAO
             MySqlDataReader dr;
             ArrayList array = new ArrayList();
 
-            strconexao = "server=localhost;userid=root;password=;database=Consultorio_odonto";
-            //strconexao = "server=localhost;userid=root;password=superiorclock;database=Consultorio_odonto;";
+            strconexao = DataStore.Conexao;
             MySqlConnection con = new MySqlConnection(strconexao);
             con.Open();
             MySqlCommand cmd = new MySqlCommand();
