@@ -69,5 +69,10 @@ namespace Controle_de_consultorio_odonto
             tl.MdiParent = this;
             tl.Show();
         }
+
+        private void Tela_main_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

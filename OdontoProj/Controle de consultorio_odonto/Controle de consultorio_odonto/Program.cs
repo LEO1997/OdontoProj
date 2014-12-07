@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using Controle_de_consultorio_odonto.Formularios;
+using Controle_de_consultorio_odonto.Formularios.Sistema;
 
 namespace Controle_de_consultorio_odonto
 {
     static class Program
     {
+        static string password;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -17,6 +19,7 @@ namespace Controle_de_consultorio_odonto
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new PasswordScrn());
-        }
+        }        
+        
     }
 }

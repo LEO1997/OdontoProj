@@ -55,3 +55,4 @@ C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Formularios.PasswordScrn.resources
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\bin\Debug\Controle de consultorio_odonto.exe
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\bin\Debug\Controle de consultorio_odonto.pdb
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Formularios.Sistema.WelcomeScrn.resources

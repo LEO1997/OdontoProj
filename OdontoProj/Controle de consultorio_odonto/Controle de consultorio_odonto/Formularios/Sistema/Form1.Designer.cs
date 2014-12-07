@@ -155,6 +155,7 @@
             this.Name = "Tela_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bem Vindo!";
+            this.Load += new System.EventHandler(this.Tela_main_Load_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

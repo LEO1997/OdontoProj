@@ -124,19 +124,19 @@
   <data name="ajudaToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAcAAAAQCAYAAADagWXwAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAAHRJREFUKFNjYKAZYASanAvE94D4HRCfBeIQmG1NQMZ/LDgOpOAAVGI1kI4F4qNQ
-        /mOQJDsQpwAxC9SoaVDJ98ge4QVyFiMZ348sOQcq8RdIVwAxE7IkzK6F2MIlDSjYAcRe2CTPQ42djU3y
-        JFRyKjZJKooBABoAIEpWSF3NAAAAAElFTkSuQmCC
+        wgAADsIBFShKgAAAAIBJREFUKFO1zSEOg0AQRuFpQ1LFxaqxVDU4PLqqrgoMNaSSS2AQCMINMPj2BKR9
+        M9lFbGp5ySd+NrvIfh2QY8YbIxJYN3z/uEA6N1qk6N1eICdcEemgCnr4seWK8YJ/9oGtJ/TjigJHbPl/
+        NbaCMtxxthU0QW/WtoIG6GFpa69EfhoAIEq2mAOEAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="cadToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAAPZJREFUOE9jYKAxOAA0fx+pdgghafgPZIMwDAgSMswXqOA5HgOeAeW8cBniD5T4
-        i2YjugtA/D9A7IduCMjZH6Caq/G4oBaq5h2QFkA2BCaxAc1kdBeApDdhsYjhJFTQiQgDXKBqLyKrfQMV
-        5Ecz4DCQfxBNDBQTIJd9RRb/DBXkxhXCSOK8ULWfkNWCnAMy1ZYIAxygas8hq22CCoICiBDYClVbj6xQ
-        FMj5CJWow2NCI1TNeyAtjK4uFCjwD6pgDdQ7HECaE4jtgHgdVA6kJgiXJVFAiS9QhbA0gEyDAjuckB/F
-        gApA/jsFxKCoAmEQG+Q1kFdRAADDgEy8p25UkQAAAABJRU5ErkJggg==
+        wgAADsIBFShKgAAAAQVJREFUOE+1kV0rBlEURueSJF/xb0h6rxRKSfkrQvweSW+5FbniQvkT3Mi3O19r
+        7TljTmPe4caq1exnnz1n5swU/80JHpfl35lMV/lMVkyk60CW8KYsg+YG17hYlj9ZwXfMb2huYP2Gy5Ey
+        fO0HdGDTRqK5wRaa73DcRkW1cBipprmB9NFe/qDiHG0uRKpp26CH9q4iJW7R5likmjM8Lctv/BPOvkZK
+        PKPNkUjdjKKzT5ESvo7N2UjdzKOzl5ESe2jTD/QbR+jsTqTEND6iC9s2BrCLztzjlI2cNfxAB/bR4wzh
+        MM7hAbrmzCq2soEv6GCbfux17GQGPd8F+qvU2qN51Iyi+ALDgEy8DF/k8QAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
