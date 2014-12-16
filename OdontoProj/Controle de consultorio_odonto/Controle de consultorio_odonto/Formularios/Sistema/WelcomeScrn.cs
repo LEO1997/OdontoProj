@@ -35,5 +35,31 @@ namespace Controle_de_consultorio_odonto.Formularios.Sistema
         {
 
         }
+
+
+//ToolStripMenuItens de Cadastro------------------------------------------------------------------||
+        private void serviçosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cadastro_servicos cadServ = new Cadastro_servicos();            
+            cadServ.Show();    
+        }
+
+        private void profissionaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           Cadastro_profss cadProf = new Cadastro_profss();
+            cadProf.Show();
+        }
+
+        private void pacientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cadastro_paciente cadPac = new Cadastro_paciente();
+             cadPac.Show();
+        }
+//ToolStripMenuItens de Cadastro------------------------------------------------------------------||
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

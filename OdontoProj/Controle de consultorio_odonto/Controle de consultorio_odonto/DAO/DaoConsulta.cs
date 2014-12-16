@@ -10,13 +10,14 @@ namespace Controle_de_consultorio_odonto.DAO
 {
     class DaoConsulta
     {
+        private string conexao;
         private MySqlConnection mycon;//variável que estabelece conexão com o bd;
         private MySqlCommand mycommand;//armazena o comando a ser executado;
+        private MySqlDataReader mydr;
 
         public DaoConsulta()
         {
-            String conexao = DataStore.Conexao;
-            
+            conexao = DataStore.Conexao;            
             mycon = new MySqlConnection(conexao);           
         }
 
@@ -34,6 +35,7 @@ namespace Controle_de_consultorio_odonto.DAO
             mycommand.Parameters.AddWithValue("@prt", myCons.PrecoTotal);            
             mycommand.Prepare();
             mycommand.ExecuteNonQuery();
+            
             mycon.Close();
         }
 
@@ -48,25 +50,22 @@ namespace Controle_de_consultorio_odonto.DAO
                                      "') where Consulta.data_hora='" + dtahora + "';" ; //Incrementa o valor da consulta com o preço do serviço.
             mycommand.Prepare();
             mycommand.ExecuteNonQuery();
+           
             mycon.Close();
         }
 
         public ArrayList getConsulta(string nomePac)//Retorna consultas realizadas por determindao paciente.
-        {
-            String strconexao;
+        {          
             MySqlDataReader dr;
             MySqlDataReader dr2;
             MySqlDataReader dr3;
             MySqlDataReader dr4;
             ArrayList array = new ArrayList();
 
-            strconexao = DataStore.Conexao;
-            
-
-            MySqlConnection con = new MySqlConnection(strconexao);       
-            MySqlConnection con2 = new MySqlConnection(strconexao);
-            MySqlConnection con3 = new MySqlConnection(strconexao);
-            MySqlConnection con4 = new MySqlConnection(strconexao);
+            MySqlConnection con = new MySqlConnection(conexao);       
+            MySqlConnection con2 = new MySqlConnection(conexao);
+            MySqlConnection con3 = new MySqlConnection(conexao);
+            MySqlConnection con4 = new MySqlConnection(conexao);
             con.Open();
             con2.Open();
             con3.Open();
@@ -97,20 +96,15 @@ namespace Controle_de_consultorio_odonto.DAO
                 dr3.Read();
                 string profnome = dr3.GetString("nome");
 
-                cmd4.CommandText = "Select * from Servico, Servico_has_Consulta where cod_servico=" +
-                                   "(select servico_cod_servico from Servico_has_Consulta where Consulta_codigo='" + dr.GetString("codigo") + "' limit 1);";
-                ArrayList arr = new ArrayList();//ArrayList para adicionar valores de descrição dos serviços da consulta.
-                dr4 = cmd4.ExecuteReader();            
-                while (dr4.Read())
-                {
-                    arr.Add(dr4.GetString("descricao"));
-                }
+                cmd4.CommandText = "Select * from Servico where cod_servico=" + dr.GetString("Servico_cod_servico") + ");";               
+                dr4 = cmd4.ExecuteReader();
+                string servdesc = dr4.GetString("descricao");
 
                 string str = ("Código: " + dr.GetString("codigo") + "\nData e hora: " + dr.GetString("data_hora")
                     + "\nSala: " + dr.GetString("sala")
                     + "\nPaciente: " + pacnome  + "\nProfissional: " + profnome
-                    + "\nServiços: " + arr[0] + "-"
-                    + "\nPreço total: R$" + dr.GetString("preco_total"));
+                    + "\nServiço prestado: " + servdesc + "-"
+                    + "\nPreço total: R$" + dr4.GetString("preco_total"));
 
                 array.Add(str);
             }

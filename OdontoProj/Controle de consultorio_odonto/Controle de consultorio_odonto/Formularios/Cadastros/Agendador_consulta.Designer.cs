@@ -215,6 +215,7 @@
             this.comboBoxServ1.Name = "comboBoxServ1";
             this.comboBoxServ1.Size = new System.Drawing.Size(121, 21);
             this.comboBoxServ1.TabIndex = 13;
+            this.comboBoxServ1.SelectedIndexChanged += new System.EventHandler(this.comboBoxServ1_SelectedIndexChanged);
             // 
             // labelServ1
             // 

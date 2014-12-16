@@ -12,11 +12,11 @@ namespace Controle_de_consultorio_odonto.DAO
     {
         private MySqlConnection mycon;//variável que estabelece conexão com o bd;
         private MySqlCommand mycommand;//armazena o comando a ser executado;
+        private MySqlDataReader mydr;
 
         public DaoPaciente()
         {
-            String conexao = DataStore.Conexao;
-            
+            String conexao = DataStore.Conexao;            
             mycon = new MySqlConnection(conexao);
         }
 
@@ -38,49 +38,45 @@ namespace Controle_de_consultorio_odonto.DAO
         }
 
         public ArrayList listar()
-        {
-            String strconexao;
-            MySqlDataReader dr;//Variável que indentifica cada instância da entidade e armazena seus valores.
+        {            
             ArrayList array = new ArrayList();//arraylist para retorno dos valores(nomes).
-
-            strconexao = DataStore.Conexao;
+                 
+            mycon.Open();
             
-            MySqlConnection con = new MySqlConnection(strconexao);
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "Select * from Paciente;";
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
+            mycommand = new MySqlCommand();
+            mycommand.Connection = mycon;
+            mycommand.CommandText = "Select * from Paciente;";
+
+            mydr = mycommand.ExecuteReader();
+            while (mydr.Read())
             {
-                array.Add(dr.GetString("nome"));//Adiciona os valores nome de cada instância da entidade Paciente.
+                array.Add(mydr.GetString("nome"));//Adiciona os valores nome de cada instância da entidade Paciente.
             }
-            con.Close();
+            
+            mycon.Close();
 
             return array;
         }
 
         public ArrayList getPaciente(string nome)
         {
-            String strconexao;
-            MySqlDataReader dr;
             ArrayList array = new ArrayList();
+                                            
+            mycon.Open();
 
-            strconexao = DataStore.Conexao;
+            mycommand = new MySqlCommand();
+            mycommand.Connection = mycon;
+            mycommand.CommandText = "Select * from Paciente where nome='" + nome + "';";
             
-            MySqlConnection con = new MySqlConnection(strconexao);
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "Select * from Paciente where nome='" + nome + "';";
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
+            mydr = mycommand.ExecuteReader();
+            while (mydr.Read())
             {
-                array.Add("Nome: " + dr.GetString("nome") + "\nCPF: " + dr.GetString("cpf")
-                    + "\nNascimento: " + dr.GetString("nascimento") + "\nEndereço: " + dr.GetString("endereco")
-                    + "\nTelefone: " + dr.GetString("telefone"));
+                array.Add("Nome: " + mydr.GetString("nome") + "\nCPF: " + mydr.GetString("cpf")
+                    + "\nNascimento: " + mydr.GetString("nascimento") + "\nEndereço: " + mydr.GetString("endereco")
+                    + "\nTelefone: " + mydr.GetString("telefone"));
             }
-            con.Close();
+            
+            mycon.Close();
 
             return array;
         }

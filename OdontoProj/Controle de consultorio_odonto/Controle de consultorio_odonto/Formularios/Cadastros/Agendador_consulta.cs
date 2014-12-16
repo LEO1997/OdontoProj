@@ -37,8 +37,8 @@ namespace Controle_de_consultorio_odonto
         private void buttonAgendar_Click(object sender, EventArgs e)
         {
             Consulta myConsulta = new Consulta();//Objeto para armazenar os valores de Consulta.
-            Servico_has_Consulta myShc1 = new Servico_has_Consulta();//Objeto para armazenar os valores de Servico_has_Consulta.
-            Servico_has_Consulta myShc2 = new Servico_has_Consulta();//Objeto para armazenar os valores de Servico_has_Consulta.
+          //  Servico_has_Consulta myShc1 = new Servico_has_Consulta();//Objeto para armazenar os valores de Servico_has_Consulta.
+           // Servico_has_Consulta myShc2 = new Servico_has_Consulta();//Objeto para armazenar os valores de Servico_has_Consulta.
 
             string paciente, profissional;
             string servico1, servico2;
@@ -81,8 +81,8 @@ namespace Controle_de_consultorio_odonto
                  daoconsulta.Save(myConsulta);//Cadastra a consulta no bd.
                 
                  
-                     myShc1.HoraConsulta = dtaHrS;
-                     myShc1.DescServico = servico1;                     
+                  //   myShc1.HoraConsulta = dtaHrS;
+                  //   myShc1.DescServico = servico1;                     
                      daoconsulta.adicionaPreco(servico1, dtaHrS);//Adiciona o preço do primeiro serviço à consulta.
                                                   
                 
@@ -94,7 +94,7 @@ namespace Controle_de_consultorio_odonto
         private void Agendador_consulta_Load(object sender, EventArgs e)
         {
 
-        }
+        }        
         
 
     }

@@ -10,14 +10,15 @@ namespace Controle_de_consultorio_odonto.DAO
 {
     class DaoServico
     {
+        private string conexao;
         private MySqlConnection mycon;
         private MySqlCommand mycommand;
+        private MySqlDataReader mydr;
 
         public DaoServico()
         {
-            String conexao = DataStore.Conexao;
-           
-            mycon = new MySqlConnection(conexao);           
+            conexao = DataStore.Conexao;       
+            mycon = new MySqlConnection(conexao);       
         }
 
         public void Save(Servico myServ)
@@ -31,51 +32,48 @@ namespace Controle_de_consultorio_odonto.DAO
             mycommand.Parameters.AddWithValue("@prc", myServ.Preco);
             mycommand.Prepare();
             mycommand.ExecuteNonQuery();
+            
             mycon.Close();
         }
 
         public ArrayList listar()
-        {
-            String strconexao;
-            MySqlDataReader dr;//Variável que indentifica cada instância da entidade e armazena seus valores.
+        {            
+            //Variável que indentifica cada instância da entidade e armazena seus valores.
             ArrayList array = new ArrayList();//arraylist para retorno dos valores(nomes).
-
-            strconexao = DataStore.Conexao;
-            //strconexao = "server=localhost;userid=root;password=superiorclock;database=Consultorio_odonto;";
-            MySqlConnection con = new MySqlConnection(strconexao);
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "Select * from Servico;";
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
+                                
+            mycon.Open();
+            mycommand = new MySqlCommand();
+            mycommand.Connection = mycon;
+            mycommand.CommandText = "Select * from Servico;";
+           
+            mydr = mycommand.ExecuteReader();
+            while (mydr.Read())
             {
-                array.Add(dr.GetString("descricao"));//Adiciona os valores descricao de cada instância da entidade Servico.
+                array.Add(mydr.GetString("descricao"));//Adiciona os valores descricao de cada instância da entidade Servico.
             }
-            con.Close();
+           
+            mycon.Close();
 
             return array;
         }
 
         public ArrayList getServico(string desc)//Pega individualmente um serviço.
-        {
-            String strconexao;
-            MySqlDataReader dr;
+        {                        
             ArrayList array = new ArrayList();
 
-            strconexao = DataStore.Conexao;
-            MySqlConnection con = new MySqlConnection(strconexao);
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "Select * from Servico where descricao='" + desc + "';";
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
+            mycon.Open();            
+            mycommand = new MySqlCommand();
+            mycommand.Connection = mycon;
+            mycommand.CommandText = "Select * from Servico where descricao='" + desc + "';";
+            
+            mydr = mycommand.ExecuteReader();
+            while (mydr.Read())
             {
-                array.Add("Nome: " + dr.GetString("descricao") + "\nCódigo: " + dr.GetString("cod_servico")
-                    + "\nPreço: R$" + dr.GetString("preco"));
+                array.Add("Nome: " + mydr.GetString("descricao") + "\nCódigo: " + mydr.GetString("cod_servico")
+                    + "\nPreço: R$" + mydr.GetString("preco"));
             }
-            con.Close();
+           
+            mycon.Close();
 
             return array;
         }

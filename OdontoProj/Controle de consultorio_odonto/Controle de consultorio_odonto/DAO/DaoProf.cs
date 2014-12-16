@@ -12,11 +12,11 @@ namespace Controle_de_consultorio_odonto.DAO
     {
         private MySqlConnection mycon;//variável que estabelece conexão com o bd;
         private MySqlCommand mycommand;//armazena o comando a ser executado;
+        private MySqlDataReader mydr;
 
         public DaoProf()
         {
-            String conexao = DataStore.Conexao;
-            
+            String conexao = DataStore.Conexao;            
             mycon = new MySqlConnection(conexao);           
         }
 
@@ -33,53 +33,48 @@ namespace Controle_de_consultorio_odonto.DAO
             mycommand.Parameters.AddWithValue("@esp", myProf.Especializacao);
             mycommand.Prepare();
             mycommand.ExecuteNonQuery();
+            
             mycon.Close();
         }
 
         public ArrayList listar()
-        {
-            String strconexao;
-            MySqlDataReader dr;//Variável que indentifica cada instância da entidade e armazena seus valores.
-            ArrayList array = new ArrayList();//arraylist para retorno dos valores(nomes).
-
-            strconexao = DataStore.Conexao;
+        {                        
+            ArrayList array = new ArrayList();//arraylist para retorno dos valores(nomes).         
             
-            MySqlConnection con = new MySqlConnection(strconexao);
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "Select * from Profissional;";
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
+            mycon.Open();
+            mycommand = new MySqlCommand();
+            mycommand.Connection = mycon;
+            mycommand.CommandText = "Select * from Profissional;";
+           
+            mydr = mycommand.ExecuteReader();
+            while (mydr.Read())
             {
-                array.Add(dr.GetString("nome"));//Adiciona os valores nomes de cada instância da entidade Profissional.
+                array.Add(mydr.GetString("nome"));//Adiciona os valores nomes de cada instância da entidade Profissional.
             }
-            con.Close();
+           
+            mycon.Close();
 
             return array;
         }
 
         public ArrayList getProfs(string nome)//retorna os valores das instâncias de Profissional que apresentam
-        {                                     //o nome do parâmetro.
-            String strconexao;
-            MySqlDataReader dr;
+        {                                     //o nome do parâmetro.                       
             ArrayList array = new ArrayList();
-
-            strconexao = DataStore.Conexao;
             
-            MySqlConnection con = new MySqlConnection(strconexao);
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "Select * from Profissional where nome='" + nome + "';";
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
+            mycon.Open();
+            mycommand = new MySqlCommand();
+            mycommand.Connection = mycon;
+            mycommand.CommandText = "Select * from Profissional where nome='" + nome + "';";
+            
+            mydr = mycommand.ExecuteReader();            
+            while (mydr.Read())
             {
-                array.Add("Nome: " + dr.GetString("nome") + "\nCRO: " + dr.GetString("cro")
-                    + "\nEspecialização: " + dr.GetString("especializacao")
-                    + "\nTelefone: " + dr.GetString("telefone"));
+                array.Add("Nome: " + mydr.GetString("nome") + "\nCRO: " + mydr.GetString("cro")
+                    + "\nEspecialização: " + mydr.GetString("especializacao")
+                    + "\nTelefone: " + mydr.GetString("telefone"));
             }
-            con.Close();
+            
+            mycon.Close();
 
             return array;
         }

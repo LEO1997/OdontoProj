@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DaoTratamento.cs" />
     <Compile Include="DAO\DataStore.cs" />
     <Compile Include="Formularios\Cadastros\AgendadorTratamentos.cs">
       <SubType>Form</SubType>
@@ -85,7 +86,6 @@
     <Compile Include="Classes de entidades\Paciente.cs" />
     <Compile Include="Classes de entidades\Profissional.cs" />
     <Compile Include="Classes de entidades\Servico.cs" />
-    <Compile Include="Classes de entidades\Servico_has_Consulta.cs" />
     <Compile Include="Classes de entidades\Tratamento.cs" />
     <Compile Include="DAO\DaoConsulta.cs" />
     <Compile Include="DAO\DaoPaciente.cs" />

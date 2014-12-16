@@ -28,77 +28,175 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListScrn));
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPagePac = new System.Windows.Forms.TabPage();
+            this.tabPageProf = new System.Windows.Forms.TabPage();
+            this.tabPageServ = new System.Windows.Forms.TabPage();
+            this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.dgv2 = new System.Windows.Forms.DataGridView();
+            this.dgv3 = new System.Windows.Forms.DataGridView();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.ToolStripSaveButton = new System.Windows.Forms.ToolStripButton();
+            this.toolTipEdit = new System.Windows.Forms.ToolTip(this.components);
+            this.tabPageCons = new System.Windows.Forms.TabPage();
             this.tabControl.SuspendLayout();
+            this.tabPagePac.SuspendLayout();
+            this.tabPageProf.SuspendLayout();
+            this.tabPageServ.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv3)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
             // 
-            this.tabControl.Controls.Add(this.tabPage1);
-            this.tabControl.Controls.Add(this.tabPage2);
-            this.tabControl.Controls.Add(this.tabPage3);
-            this.tabControl.Location = new System.Drawing.Point(2, 2);
+            this.tabControl.Controls.Add(this.tabPagePac);
+            this.tabControl.Controls.Add(this.tabPageProf);
+            this.tabControl.Controls.Add(this.tabPageServ);
+            this.tabControl.Controls.Add(this.tabPageCons);
+            this.tabControl.Location = new System.Drawing.Point(1, 28);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(365, 347);
-            this.tabControl.TabIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(671, 425);
+            this.tabControl.TabIndex = 1;
             // 
-            // tabPage1
+            // tabPagePac
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(357, 321);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Pacientes";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            this.tabPagePac.Controls.Add(this.dgv1);
+            this.tabPagePac.Location = new System.Drawing.Point(4, 22);
+            this.tabPagePac.Name = "tabPagePac";
+            this.tabPagePac.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePac.Size = new System.Drawing.Size(663, 399);
+            this.tabPagePac.TabIndex = 0;
+            this.tabPagePac.Text = "Pacientes";
+            this.tabPagePac.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabPageProf
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(357, 321);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Serviços";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            this.tabPageProf.Controls.Add(this.dgv2);
+            this.tabPageProf.Location = new System.Drawing.Point(4, 22);
+            this.tabPageProf.Name = "tabPageProf";
+            this.tabPageProf.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageProf.Size = new System.Drawing.Size(663, 399);
+            this.tabPageProf.TabIndex = 1;
+            this.tabPageProf.Text = "Profissionais";
+            this.tabPageProf.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // tabPageServ
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(357, 321);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Profissionais";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            this.tabPageServ.Controls.Add(this.dgv3);
+            this.tabPageServ.Location = new System.Drawing.Point(4, 22);
+            this.tabPageServ.Name = "tabPageServ";
+            this.tabPageServ.Size = new System.Drawing.Size(663, 399);
+            this.tabPageServ.TabIndex = 2;
+            this.tabPageServ.Text = "Serviços";
+            this.tabPageServ.UseVisualStyleBackColor = true;
+            // 
+            // dgv1
+            // 
+            this.dgv1.AllowUserToDeleteRows = false;
+            this.dgv1.BackgroundColor = System.Drawing.Color.White;
+            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv1.Location = new System.Drawing.Point(0, 0);
+            this.dgv1.Name = "dgv1";
+            this.dgv1.Size = new System.Drawing.Size(663, 432);
+            this.dgv1.TabIndex = 0;
+            this.dgv1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellContentClick);
+            // 
+            // dgv2
+            // 
+            this.dgv2.BackgroundColor = System.Drawing.Color.White;
+            this.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv2.Location = new System.Drawing.Point(0, 0);
+            this.dgv2.Name = "dgv2";
+            this.dgv2.Size = new System.Drawing.Size(667, 432);
+            this.dgv2.TabIndex = 0;
+            // 
+            // dgv3
+            // 
+            this.dgv3.BackgroundColor = System.Drawing.Color.White;
+            this.dgv3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv3.Location = new System.Drawing.Point(0, 0);
+            this.dgv3.Name = "dgv3";
+            this.dgv3.Size = new System.Drawing.Size(667, 428);
+            this.dgv3.TabIndex = 0;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripSaveButton});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(673, 25);
+            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // ToolStripSaveButton
+            // 
+            this.ToolStripSaveButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripSaveButton.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripSaveButton.Image")));
+            this.ToolStripSaveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ToolStripSaveButton.Name = "ToolStripSaveButton";
+            this.ToolStripSaveButton.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripSaveButton.Text = "toolStripButton1";
+            this.ToolStripSaveButton.ToolTipText = "Salvar alterações";
+            this.ToolStripSaveButton.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
+            // tabPageCons
+            // 
+            this.tabPageCons.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCons.Name = "tabPageCons";
+            this.tabPageCons.Size = new System.Drawing.Size(663, 399);
+            this.tabPageCons.TabIndex = 3;
+            this.tabPageCons.Text = "Consultas";
+            this.tabPageCons.UseVisualStyleBackColor = true;
             // 
             // ListScrn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(365, 352);
+            this.ClientSize = new System.Drawing.Size(673, 450);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.tabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "ListScrn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listas";
+            this.Load += new System.EventHandler(this.ListScrn_Load);
             this.tabControl.ResumeLayout(false);
+            this.tabPagePac.ResumeLayout(false);
+            this.tabPageProf.ResumeLayout(false);
+            this.tabPageServ.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv3)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.TabControl tabControl;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPagePac;
+        private System.Windows.Forms.TabPage tabPageProf;
+        private System.Windows.Forms.TabPage tabPageServ;
+        private System.Windows.Forms.DataGridView dgv1;
+        private System.Windows.Forms.DataGridView dgv2;
+        private System.Windows.Forms.DataGridView dgv3;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton ToolStripSaveButton;
+        private System.Windows.Forms.ToolTip toolTipEdit;
+        private System.Windows.Forms.TabPage tabPageCons;
+
+
+
     }
 }

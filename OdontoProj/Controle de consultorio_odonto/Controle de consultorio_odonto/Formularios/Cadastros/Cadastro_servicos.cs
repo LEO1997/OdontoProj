@@ -54,5 +54,10 @@ namespace Controle_de_consultorio_odonto
             }
            
         }
+
+        private void labelPreco_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

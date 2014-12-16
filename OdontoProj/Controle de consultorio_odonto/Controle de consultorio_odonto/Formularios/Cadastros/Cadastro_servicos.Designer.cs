@@ -61,9 +61,10 @@
             this.labelPreco.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.labelPreco.Location = new System.Drawing.Point(12, 71);
             this.labelPreco.Name = "labelPreco";
-            this.labelPreco.Size = new System.Drawing.Size(35, 13);
+            this.labelPreco.Size = new System.Drawing.Size(55, 13);
             this.labelPreco.TabIndex = 4;
-            this.labelPreco.Text = "Preço";
+            this.labelPreco.Text = "Preço(R$)";
+            this.labelPreco.Click += new System.EventHandler(this.labelPreco_Click);
             // 
             // buttonCad
             // 
@@ -78,11 +79,12 @@
             // 
             // maskedTextBoxPreco
             // 
+            this.maskedTextBoxPreco.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.maskedTextBoxPreco.Location = new System.Drawing.Point(73, 68);
             this.maskedTextBoxPreco.Mask = "000.00";
             this.maskedTextBoxPreco.Name = "maskedTextBoxPreco";
             this.maskedTextBoxPreco.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBoxPreco.TabIndex = 7;
+            this.maskedTextBoxPreco.TabIndex = 6;
             // 
             // Cadastro_servicos
             // 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Controle_de_consultorio_odonto.Formularios;
 using Controle_de_consultorio_odonto.Formularios.Sistema;
+using Controle_de_consultorio_odonto.Formularios.Listagens;
 
 namespace Controle_de_consultorio_odonto
 {
@@ -18,7 +19,7 @@ namespace Controle_de_consultorio_odonto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PasswordScrn());
+            Application.Run(new ListScrn());
         }        
         
     }
