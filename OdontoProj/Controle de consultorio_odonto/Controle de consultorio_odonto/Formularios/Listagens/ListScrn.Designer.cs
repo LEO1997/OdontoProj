@@ -32,23 +32,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListScrn));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPagePac = new System.Windows.Forms.TabPage();
-            this.tabPageProf = new System.Windows.Forms.TabPage();
-            this.tabPageServ = new System.Windows.Forms.TabPage();
             this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.tabPageProf = new System.Windows.Forms.TabPage();
             this.dgv2 = new System.Windows.Forms.DataGridView();
+            this.tabPageServ = new System.Windows.Forms.TabPage();
             this.dgv3 = new System.Windows.Forms.DataGridView();
+            this.tabPageCons = new System.Windows.Forms.TabPage();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.ToolStripSaveButton = new System.Windows.Forms.ToolStripButton();
             this.toolTipEdit = new System.Windows.Forms.ToolTip(this.components);
-            this.tabPageCons = new System.Windows.Forms.TabPage();
+            this.dgv4 = new System.Windows.Forms.DataGridView();
             this.tabControl.SuspendLayout();
             this.tabPagePac.SuspendLayout();
-            this.tabPageProf.SuspendLayout();
-            this.tabPageServ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
+            this.tabPageProf.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
+            this.tabPageServ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv3)).BeginInit();
+            this.tabPageCons.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv4)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -74,27 +77,6 @@
             this.tabPagePac.Text = "Pacientes";
             this.tabPagePac.UseVisualStyleBackColor = true;
             // 
-            // tabPageProf
-            // 
-            this.tabPageProf.Controls.Add(this.dgv2);
-            this.tabPageProf.Location = new System.Drawing.Point(4, 22);
-            this.tabPageProf.Name = "tabPageProf";
-            this.tabPageProf.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageProf.Size = new System.Drawing.Size(663, 399);
-            this.tabPageProf.TabIndex = 1;
-            this.tabPageProf.Text = "Profissionais";
-            this.tabPageProf.UseVisualStyleBackColor = true;
-            // 
-            // tabPageServ
-            // 
-            this.tabPageServ.Controls.Add(this.dgv3);
-            this.tabPageServ.Location = new System.Drawing.Point(4, 22);
-            this.tabPageServ.Name = "tabPageServ";
-            this.tabPageServ.Size = new System.Drawing.Size(663, 399);
-            this.tabPageServ.TabIndex = 2;
-            this.tabPageServ.Text = "Serviços";
-            this.tabPageServ.UseVisualStyleBackColor = true;
-            // 
             // dgv1
             // 
             this.dgv1.AllowUserToDeleteRows = false;
@@ -106,6 +88,17 @@
             this.dgv1.TabIndex = 0;
             this.dgv1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellContentClick);
             // 
+            // tabPageProf
+            // 
+            this.tabPageProf.Controls.Add(this.dgv2);
+            this.tabPageProf.Location = new System.Drawing.Point(4, 22);
+            this.tabPageProf.Name = "tabPageProf";
+            this.tabPageProf.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageProf.Size = new System.Drawing.Size(663, 399);
+            this.tabPageProf.TabIndex = 1;
+            this.tabPageProf.Text = "Profissionais";
+            this.tabPageProf.UseVisualStyleBackColor = true;
+            // 
             // dgv2
             // 
             this.dgv2.BackgroundColor = System.Drawing.Color.White;
@@ -115,6 +108,16 @@
             this.dgv2.Size = new System.Drawing.Size(667, 432);
             this.dgv2.TabIndex = 0;
             // 
+            // tabPageServ
+            // 
+            this.tabPageServ.Controls.Add(this.dgv3);
+            this.tabPageServ.Location = new System.Drawing.Point(4, 22);
+            this.tabPageServ.Name = "tabPageServ";
+            this.tabPageServ.Size = new System.Drawing.Size(663, 399);
+            this.tabPageServ.TabIndex = 2;
+            this.tabPageServ.Text = "Serviços";
+            this.tabPageServ.UseVisualStyleBackColor = true;
+            // 
             // dgv3
             // 
             this.dgv3.BackgroundColor = System.Drawing.Color.White;
@@ -123,6 +126,16 @@
             this.dgv3.Name = "dgv3";
             this.dgv3.Size = new System.Drawing.Size(667, 428);
             this.dgv3.TabIndex = 0;
+            // 
+            // tabPageCons
+            // 
+            this.tabPageCons.Controls.Add(this.dgv4);
+            this.tabPageCons.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCons.Name = "tabPageCons";
+            this.tabPageCons.Size = new System.Drawing.Size(663, 399);
+            this.tabPageCons.TabIndex = 3;
+            this.tabPageCons.Text = "Consultas";
+            this.tabPageCons.UseVisualStyleBackColor = true;
             // 
             // toolStrip1
             // 
@@ -145,14 +158,14 @@
             this.ToolStripSaveButton.ToolTipText = "Salvar alterações";
             this.ToolStripSaveButton.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
-            // tabPageCons
+            // dgv4
             // 
-            this.tabPageCons.Location = new System.Drawing.Point(4, 22);
-            this.tabPageCons.Name = "tabPageCons";
-            this.tabPageCons.Size = new System.Drawing.Size(663, 399);
-            this.tabPageCons.TabIndex = 3;
-            this.tabPageCons.Text = "Consultas";
-            this.tabPageCons.UseVisualStyleBackColor = true;
+            this.dgv4.BackgroundColor = System.Drawing.Color.White;
+            this.dgv4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv4.Location = new System.Drawing.Point(0, 0);
+            this.dgv4.Name = "dgv4";
+            this.dgv4.Size = new System.Drawing.Size(663, 399);
+            this.dgv4.TabIndex = 0;
             // 
             // ListScrn
             // 
@@ -170,13 +183,15 @@
             this.Load += new System.EventHandler(this.ListScrn_Load);
             this.tabControl.ResumeLayout(false);
             this.tabPagePac.ResumeLayout(false);
-            this.tabPageProf.ResumeLayout(false);
-            this.tabPageServ.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
+            this.tabPageProf.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).EndInit();
+            this.tabPageServ.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv3)).EndInit();
+            this.tabPageCons.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,6 +210,7 @@
         private System.Windows.Forms.ToolStripButton ToolStripSaveButton;
         private System.Windows.Forms.ToolTip toolTipEdit;
         private System.Windows.Forms.TabPage tabPageCons;
+        private System.Windows.Forms.DataGridView dgv4;
 
 
 

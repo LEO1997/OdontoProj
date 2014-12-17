@@ -48,6 +48,7 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
 
             dgv1.DataSource = dt;
             dgv1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv1.Columns["cpf"].ReadOnly = true;
 
 
             //
@@ -64,6 +65,7 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
 
             dgv2.DataSource = dt2;
             dgv2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv2.Columns["cro"].ReadOnly = true;
 
 
             //
@@ -80,21 +82,25 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
 
             dgv3.DataSource = dt3;
             dgv3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv3.Columns["cod_servico"].ReadOnly = true;
 
             //
             DataSet dtaSet4 = new DataSet();
-            MySqlDataAdapter adpter4 = new MySqlDataAdapter("select * from servico;", "server=127.0.0.1;user=root;password=superiorclock;database=consultorio_odonto;");
+            MySqlDataAdapter adpter4 = new MySqlDataAdapter("select * from consulta;", "server=127.0.0.1;user=root;password=superiorclock;database=consultorio_odonto;");
             DataTable dt4 = new DataTable();
 
-            adpter4.Fill(dt3);
+            adpter4.Fill(dt4);
 
-            dtaSet3.Tables.Add(dt3);
+            dtaSet4.Tables.Add(dt4);
 
-            DataTableReader dtr3 = new DataTableReader(dtaSet3.Tables[0]);
-            dt3.Load(dtr3, LoadOption.OverwriteChanges);
+            DataTableReader dtr4 = new DataTableReader(dtaSet4.Tables[0]);
+            dt4.Load(dtr4, LoadOption.OverwriteChanges);
 
-            dgv3.DataSource = dt3;
-            dgv3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv4.DataSource = dt4;
+            dgv4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv4.Columns["codigo"].ReadOnly = true;
+            dgv4.Columns["Paciente_cpf"].ReadOnly = true;
+            dgv4.Columns["Tratamento_cod_tratamento"].ReadOnly = true;
 
             
 
@@ -189,16 +195,16 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
                 else
                 {
                     if (tabControl.SelectedTab.Equals(tabPageServ))
-                    {
-                        cmdDel.CommandText = "DELETE FROM SERVICO";
-                        cmd.CommandText = "insert into servico(descricao, preco) values(@dsc,@prc)";
-
-                        cmdDel.ExecuteNonQuery();
+                    {                       
+                        cmd.CommandText = "update servico set descricao=@dsc , preco=@prc where cod_servico=@cod;";
+                      
                         for (int i = 0; i < dgv3.Rows.Count - 1; i++)
                         {
 
                             cmd.Parameters.Clear();
 
+                            cmd.Parameters.AddWithValue("@cod",
+                                dgv3.Rows[i].Cells[0].Value);
                             cmd.Parameters.AddWithValue("@dsc",
                                 dgv3.Rows[i].Cells[1].Value);
                             cmd.Parameters.AddWithValue("@prc",
@@ -207,6 +213,13 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
                             cmd.ExecuteNonQuery();
                         }
                         conn.Close();
+                    }
+                    else
+                    {
+                        if (tabControl.SelectedTab.Equals(tabPageCons)) 
+                        {
+ 
+                        }
                     }
                 }
             }
