@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Controle_de_consultorio_odonto.Formularios.Listagens;
 
 namespace Controle_de_consultorio_odonto.Formularios.Sistema
 {
@@ -55,11 +56,39 @@ namespace Controle_de_consultorio_odonto.Formularios.Sistema
             Cadastro_paciente cadPac = new Cadastro_paciente();
              cadPac.Show();
         }
+
+//Eventos dos botões------------------------------------------------------------------------------||
+        private void pictBoxSearch_Click_1(object sender, EventArgs e)
+        {
+            ListScrn ls = new ListScrn();
+            ls.Show();
+        }
+
+        private void pictBoxSerch_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTipSearch = new ToolTip();
+            toolTipSearch.SetToolTip(this.pictBoxSearch, "Consulta e alteração de dados");
+        }
+
+        private void pictBoxSchedule_Click(object sender, EventArgs e)
+        {
+            Agendador_consulta agendaConsulta = new Agendador_consulta();
+            agendaConsulta.Show();
+        }
+
+        private void pictBoxSchedule_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTipSchedule = new ToolTip();
+            toolTipSchedule.SetToolTip(this.pictBoxSchedule, "Agendamento de consultas");
+        }       
 //ToolStripMenuItens de Cadastro------------------------------------------------------------------||
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+       
+        
     }
 }

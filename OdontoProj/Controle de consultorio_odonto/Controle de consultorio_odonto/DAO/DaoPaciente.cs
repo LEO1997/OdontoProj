@@ -35,7 +35,7 @@ namespace Controle_de_consultorio_odonto.DAO
             mycommand.Prepare();
             mycommand.ExecuteNonQuery();
             mycon.Close();
-        }
+        }       
 
         public ArrayList listar()
         {            

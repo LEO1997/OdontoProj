@@ -27,32 +27,18 @@ namespace Controle_de_consultorio_odonto.DAO
 
             mycommand = new MySqlCommand();
             mycommand.Connection = mycon;//Vincula comado de execução com a variável de conexão.
-            mycommand.CommandText = "insert into consulta(data_hora, sala, Paciente_cpf, Profissional_cro, preco_total)" + 
+            mycommand.CommandText = "insert into consulta(data_hora, sala, Paciente_cpf, Profissional_cro, Servico_cod_servico)" + 
                                     "values(@dth,@sl,(select cpf from Paciente where nome='" + myCons.Pac + "')," +
-                                    "(select cro from Profissional where nome='" + myCons.Prof + "'),@prt)";
+                                    "(select cro from Profissional where nome='" + myCons.Prof + "')," +
+                                    "(select cod_servico from Servico where descricao='" + myCons.Serv + "'));";
             mycommand.Parameters.AddWithValue("@dth", myCons.Dtahora);
-            mycommand.Parameters.AddWithValue("@sl", myCons.Sala);            
-            mycommand.Parameters.AddWithValue("@prt", myCons.PrecoTotal);            
+            mycommand.Parameters.AddWithValue("@sl", myCons.Sala);                                   
             mycommand.Prepare();
             mycommand.ExecuteNonQuery();
             
             mycon.Close();
         }
-
-        public void adicionaPreco(string descservico, string dtahora)//Função para adicionar os precos do serviço à
-        {                                                            //consulta
-            mycon.Open();
-
-            mycommand = new MySqlCommand();
-            mycommand.Connection = mycon;
-            mycommand.CommandText = "update Consulta set preco_total=preco_total + " +
-                                     "(select preco from Servico where descricao='" + descservico + 
-                                     "') where Consulta.data_hora='" + dtahora + "';" ; //Incrementa o valor da consulta com o preço do serviço.
-            mycommand.Prepare();
-            mycommand.ExecuteNonQuery();
-           
-            mycon.Close();
-        }
+        
 
         public ArrayList getConsulta(string nomePac)//Retorna consultas realizadas por determindao paciente.
         {          

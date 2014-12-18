@@ -12,7 +12,7 @@ namespace Controle_de_consultorio_odonto.Classes_de_entidades
         private int sala;
         private string pac;
         private string prof;
-        private double precoTotal;
+        private string serv;
 
         public int Codigo
         {
@@ -79,15 +79,15 @@ namespace Controle_de_consultorio_odonto.Classes_de_entidades
         }
 
         //
-        public double PrecoTotal
+        public string Serv
         {
             get
             {
-                return precoTotal;
+                return serv;
             }
             set
             {
-                precoTotal = value;
+                serv = value;
             }
         }
     }

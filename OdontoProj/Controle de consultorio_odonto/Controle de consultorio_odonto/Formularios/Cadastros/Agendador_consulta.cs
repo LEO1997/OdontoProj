@@ -36,20 +36,17 @@ namespace Controle_de_consultorio_odonto
 
         private void buttonAgendar_Click(object sender, EventArgs e)
         {
-            Consulta myConsulta = new Consulta();//Objeto para armazenar os valores de Consulta.
-          //  Servico_has_Consulta myShc1 = new Servico_has_Consulta();//Objeto para armazenar os valores de Servico_has_Consulta.
-           // Servico_has_Consulta myShc2 = new Servico_has_Consulta();//Objeto para armazenar os valores de Servico_has_Consulta.
+            Consulta myConsulta = new Consulta();//Objeto para armazenar os valores de Consulta.         
 
             string paciente, profissional;
-            string servico1, servico2;
+            string servico1;
             int sala=0;
             DateTime dtaHr;
             string dtaHrS;
 
             paciente = comboBoxPaciente.Text;
             profissional = comboBoxProfissional.Text;
-            servico1 = comboBoxServ1.Text;
-            servico2 = comboBoxServ2.Text;
+            servico1 = comboBoxServ1.Text;            
             try
             {
                 sala = Convert.ToInt32(comboBoxSala.Text);//Converte o texto da combo em double.
@@ -65,7 +62,7 @@ namespace Controle_de_consultorio_odonto
 
             //Se ainda houver campos a serem preenchidos, o programa não permite agendamento.
             if (paciente.Equals("") || profissional.Equals("") || sala.Equals(0) || dtaHr.Equals("")
-                || (servico1.Equals("") && servico2.Equals("")))
+                || (servico1.Equals("")))
             {
                 MessageBox.Show("Preencha corretamente todos os campos!");
 
@@ -76,14 +73,9 @@ namespace Controle_de_consultorio_odonto
                 myConsulta.Sala = sala;
                 myConsulta.Pac = paciente;
                 myConsulta.Prof = profissional;
-                myConsulta.PrecoTotal = 0.50;//Taxa inicial da consulta;
+                myConsulta.Serv = servico1;//Taxa inicial da consulta;
                 DaoConsulta daoconsulta = new DaoConsulta();
-                 daoconsulta.Save(myConsulta);//Cadastra a consulta no bd.
-                
-                 
-                  //   myShc1.HoraConsulta = dtaHrS;
-                  //   myShc1.DescServico = servico1;                     
-                     daoconsulta.adicionaPreco(servico1, dtaHrS);//Adiciona o preço do primeiro serviço à consulta.
+                 daoconsulta.Save(myConsulta);//Cadastra a consulta no bd.                                                  
                                                   
                 
                 MessageBox.Show("Dados salvos corretamente.");

@@ -19,7 +19,7 @@ namespace Controle_de_consultorio_odonto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ListScrn());
+            Application.Run(new PasswordScrn());
         }        
         
     }
