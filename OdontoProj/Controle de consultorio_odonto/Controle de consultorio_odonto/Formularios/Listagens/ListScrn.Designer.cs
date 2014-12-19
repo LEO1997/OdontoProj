@@ -38,10 +38,13 @@
             this.tabPageServ = new System.Windows.Forms.TabPage();
             this.dgv3 = new System.Windows.Forms.DataGridView();
             this.tabPageCons = new System.Windows.Forms.TabPage();
+            this.dgv4 = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.ToolStripSaveButton = new System.Windows.Forms.ToolStripButton();
             this.toolTipEdit = new System.Windows.Forms.ToolTip(this.components);
-            this.dgv4 = new System.Windows.Forms.DataGridView();
+            this.tabPageTrat = new System.Windows.Forms.TabPage();
+            this.dgv5 = new System.Windows.Forms.DataGridView();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.tabControl.SuspendLayout();
             this.tabPagePac.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
@@ -50,8 +53,10 @@
             this.tabPageServ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv3)).BeginInit();
             this.tabPageCons.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv4)).BeginInit();
+            this.toolStrip1.SuspendLayout();
+            this.tabPageTrat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv5)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -60,6 +65,7 @@
             this.tabControl.Controls.Add(this.tabPageProf);
             this.tabControl.Controls.Add(this.tabPageServ);
             this.tabControl.Controls.Add(this.tabPageCons);
+            this.tabControl.Controls.Add(this.tabPageTrat);
             this.tabControl.Location = new System.Drawing.Point(1, 28);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -137,10 +143,20 @@
             this.tabPageCons.Text = "Consultas";
             this.tabPageCons.UseVisualStyleBackColor = true;
             // 
+            // dgv4
+            // 
+            this.dgv4.BackgroundColor = System.Drawing.Color.White;
+            this.dgv4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv4.Location = new System.Drawing.Point(0, 0);
+            this.dgv4.Name = "dgv4";
+            this.dgv4.Size = new System.Drawing.Size(663, 399);
+            this.dgv4.TabIndex = 0;
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripSaveButton});
+            this.ToolStripSaveButton,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(673, 25);
@@ -158,14 +174,35 @@
             this.ToolStripSaveButton.ToolTipText = "Salvar alterações";
             this.ToolStripSaveButton.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
-            // dgv4
+            // tabPageTrat
             // 
-            this.dgv4.BackgroundColor = System.Drawing.Color.White;
-            this.dgv4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv4.Location = new System.Drawing.Point(0, 0);
-            this.dgv4.Name = "dgv4";
-            this.dgv4.Size = new System.Drawing.Size(663, 399);
-            this.dgv4.TabIndex = 0;
+            this.tabPageTrat.Controls.Add(this.dgv5);
+            this.tabPageTrat.Location = new System.Drawing.Point(4, 22);
+            this.tabPageTrat.Name = "tabPageTrat";
+            this.tabPageTrat.Size = new System.Drawing.Size(663, 399);
+            this.tabPageTrat.TabIndex = 4;
+            this.tabPageTrat.Text = "Tratamentos";
+            this.tabPageTrat.UseVisualStyleBackColor = true;
+            // 
+            // dgv5
+            // 
+            this.dgv5.BackgroundColor = System.Drawing.Color.White;
+            this.dgv5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv5.Location = new System.Drawing.Point(0, 0);
+            this.dgv5.Name = "dgv5";
+            this.dgv5.Size = new System.Drawing.Size(663, 399);
+            this.dgv5.TabIndex = 0;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.ToolTipText = "Deletar item";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_2);
             // 
             // ListScrn
             // 
@@ -189,9 +226,11 @@
             this.tabPageServ.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv3)).EndInit();
             this.tabPageCons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv4)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv4)).EndInit();
+            this.tabPageTrat.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,6 +250,9 @@
         private System.Windows.Forms.ToolTip toolTipEdit;
         private System.Windows.Forms.TabPage tabPageCons;
         private System.Windows.Forms.DataGridView dgv4;
+        private System.Windows.Forms.TabPage tabPageTrat;
+        private System.Windows.Forms.DataGridView dgv5;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
 
 
 

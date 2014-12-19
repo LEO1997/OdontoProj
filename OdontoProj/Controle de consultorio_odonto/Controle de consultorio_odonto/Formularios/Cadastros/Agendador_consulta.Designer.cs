@@ -40,8 +40,8 @@
             this.comboBoxPaciente = new System.Windows.Forms.ComboBox();
             this.groupBoxDtaSla = new System.Windows.Forms.GroupBox();
             this.labelDta = new System.Windows.Forms.Label();
-            this.comboBoxServ1 = new System.Windows.Forms.ComboBox();
             this.labelServ1 = new System.Windows.Forms.Label();
+            this.comboBoxServ1 = new System.Windows.Forms.ComboBox();
             this.groupBoxPacMed.SuspendLayout();
             this.groupBoxDtaSla.SuspendLayout();
             this.SuspendLayout();
@@ -152,6 +152,7 @@
             // comboBoxPaciente
             // 
             this.comboBoxPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPaciente.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.comboBoxPaciente.FormattingEnabled = true;
             this.comboBoxPaciente.Location = new System.Drawing.Point(117, 13);
             this.comboBoxPaciente.Name = "comboBoxPaciente";
@@ -185,16 +186,6 @@
             this.labelDta.TabIndex = 7;
             this.labelDta.Text = "data e hora";
             // 
-            // comboBoxServ1
-            // 
-            this.comboBoxServ1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxServ1.FormattingEnabled = true;
-            this.comboBoxServ1.Location = new System.Drawing.Point(67, 46);
-            this.comboBoxServ1.Name = "comboBoxServ1";
-            this.comboBoxServ1.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxServ1.TabIndex = 13;
-            //this.comboBoxServ1.SelectedIndexChanged += new System.EventHandler(this.comboBoxServ1_SelectedIndexChanged);
-            // 
             // labelServ1
             // 
             this.labelServ1.AutoSize = true;
@@ -203,6 +194,16 @@
             this.labelServ1.Size = new System.Drawing.Size(46, 13);
             this.labelServ1.TabIndex = 11;
             this.labelServ1.Text = "Serviço:";
+            // 
+            // comboBoxServ1
+            // 
+            this.comboBoxServ1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxServ1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.comboBoxServ1.FormattingEnabled = true;
+            this.comboBoxServ1.Location = new System.Drawing.Point(67, 46);
+            this.comboBoxServ1.Name = "comboBoxServ1";
+            this.comboBoxServ1.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxServ1.TabIndex = 13;
             // 
             // Agendador_consulta
             // 

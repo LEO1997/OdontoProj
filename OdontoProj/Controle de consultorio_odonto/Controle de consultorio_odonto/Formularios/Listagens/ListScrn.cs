@@ -59,8 +59,15 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
             dgv4.DataSource = generateDataTable("select * from consulta;");
             dgv4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv4.Columns["codigo"].ReadOnly = true;
-            dgv4.Columns["Paciente_cpf"].ReadOnly = true;
+            dgv4.Columns["Profissional_cro"].ReadOnly = true;
             dgv4.Columns["Tratamento_cod_tratamento"].ReadOnly = true;
+
+            //           
+
+            dgv5.DataSource = generateDataTable("select * from tratamento;");
+            dgv5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv5.Columns["cod_tratamento"].ReadOnly = true;
+            dgv5.Columns["Paciente_cpf"].ReadOnly = true;           
 
             
 
@@ -181,21 +188,21 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
                     cmd.CommandText = "update consulta set data_hora=@dt , sala=@sl, Profissional_cro=@pcro, " + 
                                       "Servico_cod_servico=@scs where codigo=@cod;";
 
-                          for (int i = 0; i < dgv3.Rows.Count - 1; i++)
+                          for (int i = 0; i < dgv4.Rows.Count - 1; i++)
                           {
 
                               cmd.Parameters.Clear();
 
                               cmd.Parameters.AddWithValue("@cod",
-                                  dgv3.Rows[i].Cells[0].Value);
+                                  dgv4.Rows[i].Cells[0].Value);
                               cmd.Parameters.AddWithValue("@dt",
-                                  dgv3.Rows[i].Cells[1].Value);
+                                  dgv4.Rows[i].Cells[1].Value);
                               cmd.Parameters.AddWithValue("@sl",
-                                  dgv3.Rows[i].Cells[2].Value);
+                                  dgv4.Rows[i].Cells[2].Value);
                               cmd.Parameters.AddWithValue("@pcro",
-                                  dgv3.Rows[i].Cells[4].Value);
+                                  dgv4.Rows[i].Cells[4].Value);
                               cmd.Parameters.AddWithValue("@scs",
-                                  dgv3.Rows[i].Cells[5].Value);
+                                  dgv4.Rows[i].Cells[5].Value);
 
                               cmd.ExecuteNonQuery();
                           }
@@ -203,10 +210,123 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
                           
                           break;
 
-            }
-            
-                           
+                //Salvar alterações na tabela de consultas.
+                case "tabPageTrat":
+
+                     cmd.CommandText = "update tratamento set titulo=@tit where cod_tratamento=@cod;";
+                      
+                        for (int i = 0; i < dgv5.Rows.Count - 1; i++)
+                        {                           
+
+                            cmd.Parameters.Clear();
+
+                            cmd.Parameters.AddWithValue("@cod",
+                                dgv5.Rows[i].Cells[0].Value);
+                            cmd.Parameters.AddWithValue("@tit",
+                                dgv5.Rows[i].Cells[1].Value);                            
+
+                            cmd.ExecuteNonQuery();
+                        }
+                        conn.Close();
+
+                        break;                         
+
+            }                                       
                         
+        }
+
+
+        private void toolStripButton1_Click_2(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection(DataStore.Conexao);
+            MySqlCommand cmd = new MySqlCommand("");
+            MySqlCommand cmdDel = new MySqlCommand("");
+
+            conn.Open();
+            cmd.Connection = conn;
+            cmdDel.Connection = conn;
+
+            switch (tabControl.SelectedTab.Name)
+            {
+
+                //Excluir de pacientes.
+                case "tabPagePac":
+
+                    cmd.CommandText = "delete from paciente where cpf=@cpf;";
+
+                    for (int i = 0; i < dgv1.Rows.Count - 1; i++)
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@cpf", dgv1.SelectedRows[0].Cells[0].Value);
+                        cmd.ExecuteNonQuery();
+                    }
+                    conn.Close();
+
+                    break;
+
+                //Excluir de profissionais.
+                case "tabPageProf":
+
+                    cmd.CommandText = "delete from profissional where cro=@cro;";  
+
+                    for (int i = 0; i < dgv2.Rows.Count - 1; i++)
+                    {
+
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@cro", dgv2.SelectedRows[i].Cells[0].Value);                        
+                        cmd.ExecuteNonQuery();
+                    }
+                    conn.Close();
+
+                    break;
+
+                //Excluir de serviço.
+                case "tabPageServ":
+
+                    cmd.CommandText = "delete from servico where codigo_servico=@cod;";   
+
+                    for (int i = 0; i < dgv3.Rows.Count - 1; i++)
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@cod", dgv3.SelectedRows[i].Cells[0].Value);                        
+                        cmd.ExecuteNonQuery();
+                    }
+                    conn.Close();
+
+                    break;
+
+                //Excluir de consultas.
+                case "tabPageCons":
+
+                    cmd.CommandText = "delete from consulta where codigo=@cod;";                    
+
+                    for (int i = 0; i < dgv4.Rows.Count - 1; i++)
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@cod", dgv4.SelectedRows[i].Cells[0].Value);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    conn.Close();
+
+                    break;
+
+                //Excluir de tratamentos.
+                case "tabPageTrat":
+
+                    cmd.CommandText = "delete from tratamento where cod_tratamento=@cod;";
+
+                    for (int i = 0; i < dgv5.Rows.Count - 1; i++)
+                    {
+
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@cod", dgv5.SelectedRows[i].Cells[0].Value);
+                        cmd.ExecuteNonQuery();
+                    }
+                    conn.Close();
+
+                    break;
+            }
         }
 
 
@@ -226,7 +346,7 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
             dt.Load(dtr, LoadOption.OverwriteChanges);
 
             return dt;
-        }
+        }       
       
     }
 }
