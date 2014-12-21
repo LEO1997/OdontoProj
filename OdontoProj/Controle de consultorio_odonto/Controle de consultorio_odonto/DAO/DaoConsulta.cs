@@ -5,6 +5,7 @@ using System.Text;
 using MySql.Data.MySqlClient;
 using Controle_de_consultorio_odonto.Classes_de_entidades;
 using System.Collections;
+using System.Data;
 
 namespace Controle_de_consultorio_odonto.DAO
 {
@@ -36,6 +37,42 @@ namespace Controle_de_consultorio_odonto.DAO
             mycommand.Prepare();
             mycommand.ExecuteNonQuery();
             
+            mycon.Close();
+        }
+
+        public void update(object cod, object dta, object sala, object cro, object serv)
+        {
+            mycon.Open();
+
+            mycommand = new MySqlCommand();
+            mycommand.Connection = mycon;
+            mycommand.CommandText = "update consulta set data_hora=@dt , sala=@sl, Profissional_cro=@pcro, " +
+                                      "Servico_cod_servico=@scs where codigo=@cod;";
+
+            mycommand.Parameters.Clear();
+            mycommand.Parameters.AddWithValue("@cod", cod);
+            mycommand.Parameters.AddWithValue("@dt", dta);
+            mycommand.Parameters.AddWithValue("@sl", sala);
+            mycommand.Parameters.AddWithValue("@pcro", cro);
+            mycommand.Parameters.AddWithValue("@scs", serv);            
+
+            mycommand.ExecuteNonQuery();
+
+            mycon.Close();
+
+        }
+
+        public void delete(object cod)
+        {
+            mycon.Open();
+            mycommand = new MySqlCommand();
+            mycommand.Connection = mycon;
+            mycommand.CommandText = "delete from consulta where codigo=@cod;";
+
+            mycommand.Parameters.Clear();
+            mycommand.Parameters.AddWithValue("@cod", cod);
+            mycommand.ExecuteNonQuery();
+
             mycon.Close();
         }
         

@@ -17,59 +17,15 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
         {
             InitializeComponent();
         }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void ListScrn_Load(object sender, EventArgs e)
         {
-
-            dgv1.DataSource = generateDataTable("select * from paciente;");
-            dgv1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgv1.Columns["cpf"].ReadOnly = true;
-
-
-            //            
-
-            dgv2.DataSource = generateDataTable("select * from profissional;");
-            dgv2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgv2.Columns["cro"].ReadOnly = true;
-
-
-            //            
-
-            dgv3.DataSource = generateDataTable("select * from servico;");
-            dgv3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgv3.Columns["cod_servico"].ReadOnly = true;
-
-            //           
-
-            dgv4.DataSource = generateDataTable("select * from consulta;");
-            dgv4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgv4.Columns["codigo"].ReadOnly = true;
-            dgv4.Columns["Profissional_cro"].ReadOnly = true;
-            dgv4.Columns["Tratamento_cod_tratamento"].ReadOnly = true;
-
-            //           
-
-            dgv5.DataSource = generateDataTable("select * from tratamento;");
-            dgv5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgv5.Columns["cod_tratamento"].ReadOnly = true;
-            dgv5.Columns["Paciente_cpf"].ReadOnly = true;           
-
-            
+            dgvLoad(dgv1);
+            dgvLoad(dgv2);
+            dgvLoad(dgv3);
+            dgvLoad(dgv4);
+            dgvLoad(dgv5);            
 
         }
 
@@ -95,139 +51,92 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
 
         
         private void toolStripButton1_Click_1(object sender, EventArgs e)
-        {
-            MySqlConnection conn = new MySqlConnection(DataStore.Conexao);
-            MySqlCommand cmd = new MySqlCommand("");
-            MySqlCommand cmdDel = new MySqlCommand("");
-
-            conn.Open();
-            cmd.Connection = conn;
-            cmdDel.Connection = conn;
-
+        {             
             switch (tabControl.SelectedTab.Name)
             {
                 
                 //Salvar alterações na tabela de pacientes.
                 case "tabPagePac":
 
-                    cmd.CommandText = "update paciente set nome=@nm, nascimento=@nasc, endereco=@end, telefone=@tel " +
-                                    "where cpf=@cpf;";               
+                    DaoPaciente daoPac = new DaoPaciente();     
                                
                         for (int i = 0; i < dgv1.Rows.Count - 1; i++)
                         {
-                    
-                        cmd.Parameters.AddWithValue("@cpf",
-                            dgv1.Rows[i].Cells[0].Value);
-                        cmd.Parameters.AddWithValue("@nm",
-                            dgv1.Rows[i].Cells[1].Value);
-                        cmd.Parameters.AddWithValue("@nasc",
-                            dgv1.Rows[i].Cells[2].Value);
-                        cmd.Parameters.AddWithValue("@end",
-                           dgv1.Rows[i].Cells[3].Value);
-                        cmd.Parameters.AddWithValue("@tel",
-                            dgv1.Rows[i].Cells[4].Value);
 
-                        cmd.ExecuteNonQuery();
-                        }
-                    conn.Close();
+                            daoPac.update(dgv1.Rows[i].Cells[0].Value, 
+                                          dgv1.Rows[i].Cells[1].Value, 
+                                          dgv1.Rows[i].Cells[2].Value, 
+                                          dgv1.Rows[i].Cells[3].Value, 
+                                          dgv1.Rows[i].Cells[4].Value);                                     
+                        
+                        }                        
                     
                     break;
 
                 //Salvar alterações na tabela de profissionais.
                 case "tabPageProf":
-                    
-                    cmd.CommandText = "update profissional set nome=@nm, telefone=@tel, especializacao=@esp " +
-                                      "where cro=@cro;";           
+
+                    DaoProf daoProf = new DaoProf();          
                  
                         for (int i = 0; i < dgv2.Rows.Count - 1; i++)
                         {
 
-                            cmd.Parameters.Clear();
-
-                            cmd.Parameters.AddWithValue("@cro",
-                                dgv2.Rows[i].Cells[0].Value);
-                            cmd.Parameters.AddWithValue("@nm",
-                                dgv2.Rows[i].Cells[1].Value);
-                            cmd.Parameters.AddWithValue("@tel",
-                                dgv2.Rows[i].Cells[2].Value);
-                            cmd.Parameters.AddWithValue("@esp",
-                                dgv2.Rows[i].Cells[3].Value);
-
-                            cmd.ExecuteNonQuery();
-                        }
-                    conn.Close();
+                            daoProf.update(dgv2.Rows[i].Cells[0].Value,
+                                           dgv2.Rows[i].Cells[1].Value,                            
+                                           dgv2.Rows[i].Cells[2].Value,                            
+                                           dgv2.Rows[i].Cells[3].Value);
+                           
+                        }                       
 
                     break;
 
                 //Salvar alterações na tabela de serviço.
                 case "tabPageServ":
 
-                    cmd.CommandText = "update servico set descricao=@dsc , preco=@prc where cod_servico=@cod;";
+                    DaoServico daoServ = new DaoServico();
                       
                         for (int i = 0; i < dgv3.Rows.Count - 1; i++)
                         {
+                            
 
-                            cmd.Parameters.Clear();
+                            daoServ.update(dgv3.Rows[i].Cells[0].Value,                            
+                                           dgv3.Rows[i].Cells[1].Value,
+                                           dgv3.Rows[i].Cells[2].Value);
 
-                            cmd.Parameters.AddWithValue("@cod",
-                                dgv3.Rows[i].Cells[0].Value);
-                            cmd.Parameters.AddWithValue("@dsc",
-                                dgv3.Rows[i].Cells[1].Value);
-                            cmd.Parameters.AddWithValue("@prc",
-                                dgv3.Rows[i].Cells[2].Value);
-
-                            cmd.ExecuteNonQuery();
-                        }
-                        conn.Close();
+                        }                        
 
                         break;
 
                 //Salvar alterações na tabela de consultas.
                 case "tabPageCons":
-                    
-                    cmd.CommandText = "update consulta set data_hora=@dt , sala=@sl, Profissional_cro=@pcro, " + 
-                                      "Servico_cod_servico=@scs where codigo=@cod;";
+
+                      DaoConsulta daoCons = new DaoConsulta();
 
                           for (int i = 0; i < dgv4.Rows.Count - 1; i++)
                           {
 
-                              cmd.Parameters.Clear();
-
-                              cmd.Parameters.AddWithValue("@cod",
-                                  dgv4.Rows[i].Cells[0].Value);
-                              cmd.Parameters.AddWithValue("@dt",
-                                  dgv4.Rows[i].Cells[1].Value);
-                              cmd.Parameters.AddWithValue("@sl",
-                                  dgv4.Rows[i].Cells[2].Value);
-                              cmd.Parameters.AddWithValue("@pcro",
-                                  dgv4.Rows[i].Cells[4].Value);
-                              cmd.Parameters.AddWithValue("@scs",
-                                  dgv4.Rows[i].Cells[5].Value);
-
-                              cmd.ExecuteNonQuery();
-                          }
-                          conn.Close();
+                              daoCons.update(dgv4.Rows[i].Cells[0].Value,                              
+                                             dgv4.Rows[i].Cells[1].Value,                              
+                                             dgv4.Rows[i].Cells[2].Value,                              
+                                             dgv4.Rows[i].Cells[4].Value,                              
+                                             dgv4.Rows[i].Cells[5].Value);
+                              
+                          }                          
                           
                           break;
 
                 //Salvar alterações na tabela de consultas.
                 case "tabPageTrat":
 
-                     cmd.CommandText = "update tratamento set titulo=@tit where cod_tratamento=@cod;";
+                      DaoTratamento daoTrat = new DaoTratamento();
                       
                         for (int i = 0; i < dgv5.Rows.Count - 1; i++)
                         {                           
-
-                            cmd.Parameters.Clear();
-
-                            cmd.Parameters.AddWithValue("@cod",
-                                dgv5.Rows[i].Cells[0].Value);
-                            cmd.Parameters.AddWithValue("@tit",
-                                dgv5.Rows[i].Cells[1].Value);                            
-
-                            cmd.ExecuteNonQuery();
-                        }
-                        conn.Close();
+                            
+                            daoTrat.update(dgv5.Rows[i].Cells[0].Value,                            
+                                           dgv5.Rows[i].Cells[1].Value);                            
+                            
+                        }                        
 
                         break;                         
 
@@ -237,14 +146,7 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
 
 
         private void toolStripButton1_Click_2(object sender, EventArgs e)
-        {
-            MySqlConnection conn = new MySqlConnection(DataStore.Conexao);
-            MySqlCommand cmd = new MySqlCommand("");
-            MySqlCommand cmdDel = new MySqlCommand("");
-
-            conn.Open();
-            cmd.Connection = conn;
-            cmdDel.Connection = conn;
+        {                     
 
             switch (tabControl.SelectedTab.Name)
             {
@@ -252,79 +154,109 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
                 //Excluir de pacientes.
                 case "tabPagePac":
 
-                    cmd.CommandText = "delete from paciente where cpf=@cpf;";
+                    DaoPaciente daoPac = new DaoPaciente();
 
-                    for (int i = 0; i < dgv1.Rows.Count - 1; i++)
+                    for (int i = 0; i < dgv1.SelectedRows.Count; i++)
                     {
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@cpf", dgv1.SelectedRows[0].Cells[0].Value);
-                        cmd.ExecuteNonQuery();
+                        daoPac.delete(dgv1.SelectedRows[0].Cells[0].Value);                        
                     }
-                    conn.Close();
+                    dgvLoad(dgv1);
 
                     break;
 
                 //Excluir de profissionais.
                 case "tabPageProf":
 
-                    cmd.CommandText = "delete from profissional where cro=@cro;";  
+                    DaoProf daoProf = new DaoProf();
 
-                    for (int i = 0; i < dgv2.Rows.Count - 1; i++)
+                    for (int i = 0; i < dgv2.SelectedRows.Count; i++)
                     {
-
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@cro", dgv2.SelectedRows[i].Cells[0].Value);                        
-                        cmd.ExecuteNonQuery();
+                        daoProf.delete(dgv2.SelectedRows[i].Cells[0].Value);                                                
                     }
-                    conn.Close();
+                    dgvLoad(dgv2);
 
                     break;
 
                 //Excluir de serviço.
                 case "tabPageServ":
 
-                    cmd.CommandText = "delete from servico where codigo_servico=@cod;";   
+                    DaoServico daoServ = new DaoServico();
 
-                    for (int i = 0; i < dgv3.Rows.Count - 1; i++)
+                    for (int i = 0; i < dgv3.SelectedRows.Count; i++)
                     {
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@cod", dgv3.SelectedRows[i].Cells[0].Value);                        
-                        cmd.ExecuteNonQuery();
+                        daoServ.delete(dgv3.SelectedRows[i].Cells[0].Value);
                     }
-                    conn.Close();
+                    dgvLoad(dgv3);
 
                     break;
 
                 //Excluir de consultas.
                 case "tabPageCons":
 
-                    cmd.CommandText = "delete from consulta where codigo=@cod;";                    
+                    DaoConsulta daoCons = new DaoConsulta();
 
-                    for (int i = 0; i < dgv4.Rows.Count - 1; i++)
+                    for (int i = 0; i < dgv4.SelectedRows.Count; i++)
                     {
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@cod", dgv4.SelectedRows[i].Cells[0].Value);
-                        cmd.ExecuteNonQuery();
+                        daoCons.delete(dgv4.SelectedRows[i].Cells[0].Value);                        
                     }
-
-                    conn.Close();
+                    dgvLoad(dgv4);
+                  
 
                     break;
 
                 //Excluir de tratamentos.
                 case "tabPageTrat":
 
-                    cmd.CommandText = "delete from tratamento where cod_tratamento=@cod;";
+                    DaoTratamento daoTrat = new DaoTratamento();
 
-                    for (int i = 0; i < dgv5.Rows.Count - 1; i++)
+                    for (int i = 0; i < dgv5.SelectedRows.Count; i++)
                     {
-
-                        cmd.Parameters.Clear();
-                        cmd.Parameters.AddWithValue("@cod", dgv5.SelectedRows[i].Cells[0].Value);
-                        cmd.ExecuteNonQuery();
+                        daoTrat.delete(dgv5.SelectedRows[i].Cells[0].Value);                        
                     }
-                    conn.Close();
+                    dgvLoad(dgv5);
 
+                    break;
+            }
+        }
+
+
+        //Método para carregar ou recarregar tabela.
+        private void dgvLoad(DataGridView dgv)
+        {
+            switch (dgv.Name)
+            {
+                case "dgv1":
+                    dgv.DataSource = generateDataTable("select * from paciente;");
+                    dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgv.Columns["cpf"].ReadOnly = true;
+                    break;
+
+                case "dgv2":
+
+                    dgv.DataSource = generateDataTable("select * from profissional;");
+                    dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgv.Columns["cro"].ReadOnly = true;
+                    break;
+
+                case "dgv3":
+                    dgv.DataSource = generateDataTable("select * from servico;");
+                    dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgv.Columns["cod_servico"].ReadOnly = true;
+                    break;
+
+                case "dgv4":
+                    dgv.DataSource = generateDataTable("select * from consulta;");
+                    dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgv.Columns["codigo"].ReadOnly = true;
+                    dgv.Columns["Profissional_cro"].ReadOnly = true;
+                    dgv.Columns["Tratamento_cod_tratamento"].ReadOnly = true;
+                    break;
+
+                case "dgv5":
+                    dgv.DataSource = generateDataTable("select * from tratamento;");
+                    dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgv.Columns["cod_tratamento"].ReadOnly = true;
+                    dgv.Columns["Paciente_cpf"].ReadOnly = true;
                     break;
             }
         }
@@ -344,9 +276,9 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
 
             DataTableReader dtr = new DataTableReader(dtaSet.Tables[0]);
             dt.Load(dtr, LoadOption.OverwriteChanges);
-
-            return dt;
-        }       
+                        
+            return dt;           
+        }        
       
     }
 }

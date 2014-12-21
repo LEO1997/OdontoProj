@@ -82,7 +82,7 @@
             this.textBoxCro.MaxLength = 10;
             this.textBoxCro.Name = "textBoxCro";
             this.textBoxCro.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCro.TabIndex = 4;
+            this.textBoxCro.TabIndex = 6;
             // 
             // textBoxNome
             // 
@@ -91,7 +91,7 @@
             this.textBoxNome.MaxLength = 45;
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(231, 20);
-            this.textBoxNome.TabIndex = 5;
+            this.textBoxNome.TabIndex = 4;
             // 
             // checkBoxCiru
             // 
@@ -119,7 +119,7 @@
             this.checkBoxOP.Location = new System.Drawing.Point(199, 29);
             this.checkBoxOP.Name = "checkBoxOP";
             this.checkBoxOP.Size = new System.Drawing.Size(101, 17);
-            this.checkBoxOP.TabIndex = 9;
+            this.checkBoxOP.TabIndex = 10;
             this.checkBoxOP.Text = "Odontopediatria";
             this.checkBoxOP.UseVisualStyleBackColor = true;
             // 
@@ -129,7 +129,7 @@
             this.checkBoxPD.Location = new System.Drawing.Point(199, 52);
             this.checkBoxPD.Name = "checkBoxPD";
             this.checkBoxPD.Size = new System.Drawing.Size(103, 17);
-            this.checkBoxPD.TabIndex = 10;
+            this.checkBoxPD.TabIndex = 11;
             this.checkBoxPD.Text = "Prótese dentária";
             this.checkBoxPD.UseVisualStyleBackColor = true;
             // 
@@ -139,7 +139,7 @@
             this.checkBoxOrto.Location = new System.Drawing.Point(6, 75);
             this.checkBoxOrto.Name = "checkBoxOrto";
             this.checkBoxOrto.Size = new System.Drawing.Size(75, 17);
-            this.checkBoxOrto.TabIndex = 11;
+            this.checkBoxOrto.TabIndex = 9;
             this.checkBoxOrto.Text = "Ortodontia";
             this.checkBoxOrto.UseVisualStyleBackColor = true;
             // 
@@ -192,7 +192,7 @@
             this.maskedTextBoxTel.Mask = "0000-9999";
             this.maskedTextBoxTel.Name = "maskedTextBoxTel";
             this.maskedTextBoxTel.Size = new System.Drawing.Size(87, 20);
-            this.maskedTextBoxTel.TabIndex = 6;
+            this.maskedTextBoxTel.TabIndex = 5;
             // 
             // buttonSalvar
             // 

@@ -5,6 +5,7 @@ using System.Text;
 using MySql.Data.MySqlClient;
 using Controle_de_consultorio_odonto.Classes_de_entidades;
 using System.Collections;
+using System.Data;
 
 namespace Controle_de_consultorio_odonto.DAO
 {
@@ -36,6 +37,42 @@ namespace Controle_de_consultorio_odonto.DAO
             
             mycon.Close();
         }
+
+        public void update(object cro, object nome, object tel, object esp)
+        {            
+            mycon.Open();
+
+            mycommand = new MySqlCommand();
+            mycommand.Connection = mycon;
+            mycommand.CommandText = "update profissional set nome=@nm, telefone=@tel, especializacao=@esp " +
+                                      "where cro=@cro;"; 
+
+            mycommand.Parameters.Clear();
+            mycommand.Parameters.AddWithValue("@cro", cro);
+            mycommand.Parameters.AddWithValue("@nm", nome);
+            mycommand.Parameters.AddWithValue("@tel", tel);
+            mycommand.Parameters.AddWithValue("@esp", esp);            
+
+            mycommand.ExecuteNonQuery();
+
+            mycon.Close();
+
+        }
+
+        public void delete(object cro)
+        {
+            mycon.Open();
+            mycommand = new MySqlCommand();
+            mycommand.Connection = mycon;
+            mycommand.CommandText = "delete from profissional where cro=@cro;";  
+
+            mycommand.Parameters.Clear();
+            mycommand.Parameters.AddWithValue("@cro", cro);
+            mycommand.ExecuteNonQuery();
+
+            mycon.Close();
+        }       
+
 
         public ArrayList listar()
         {                        

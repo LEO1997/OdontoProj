@@ -54,7 +54,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(134, 82);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(168, 20);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dateTimePicker1.TabIndex = 8;
             // 
             // labelPaciente
             // 
@@ -88,7 +88,7 @@
             this.comboBoxProfissional.MaxLength = 45;
             this.comboBoxProfissional.Name = "comboBoxProfissional";
             this.comboBoxProfissional.Size = new System.Drawing.Size(259, 21);
-            this.comboBoxProfissional.TabIndex = 4;
+            this.comboBoxProfissional.TabIndex = 6;
             // 
             // labelSala
             // 
@@ -124,7 +124,7 @@
             this.comboBoxSala.Location = new System.Drawing.Point(288, 46);
             this.comboBoxSala.Name = "comboBoxSala";
             this.comboBoxSala.Size = new System.Drawing.Size(66, 21);
-            this.comboBoxSala.TabIndex = 6;
+            this.comboBoxSala.TabIndex = 8;
             // 
             // buttonAgendar
             // 
@@ -132,7 +132,7 @@
             this.buttonAgendar.Location = new System.Drawing.Point(171, 224);
             this.buttonAgendar.Name = "buttonAgendar";
             this.buttonAgendar.Size = new System.Drawing.Size(75, 23);
-            this.buttonAgendar.TabIndex = 7;
+            this.buttonAgendar.TabIndex = 9;
             this.buttonAgendar.Text = "Agendar";
             this.buttonAgendar.UseVisualStyleBackColor = true;
             this.buttonAgendar.Click += new System.EventHandler(this.buttonAgendar_Click);
@@ -203,7 +203,7 @@
             this.comboBoxServ1.Location = new System.Drawing.Point(67, 46);
             this.comboBoxServ1.Name = "comboBoxServ1";
             this.comboBoxServ1.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxServ1.TabIndex = 13;
+            this.comboBoxServ1.TabIndex = 7;
             // 
             // Agendador_consulta
             // 

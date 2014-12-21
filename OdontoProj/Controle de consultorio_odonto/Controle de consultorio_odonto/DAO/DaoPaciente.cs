@@ -5,6 +5,7 @@ using System.Text;
 using MySql.Data.MySqlClient;
 using Controle_de_consultorio_odonto.Classes_de_entidades;
 using System.Collections;
+using System.Data;
 
 namespace Controle_de_consultorio_odonto.DAO
 {
@@ -34,6 +35,42 @@ namespace Controle_de_consultorio_odonto.DAO
             mycommand.Parameters.AddWithValue("@tel", myPac.Telefone);
             mycommand.Prepare();
             mycommand.ExecuteNonQuery();
+           
+            mycon.Close();
+        }
+
+        public void update(object cpf, object name, object nasc, object end, object tel)
+        {           
+            mycon.Open();
+
+            mycommand = new MySqlCommand();
+            mycommand.Connection = mycon;
+            mycommand.CommandText = "update paciente set nome=@nm, nascimento=@nasc, endereco=@end, telefone=@tel " +
+                                    "where cpf=@cpf;";
+
+            mycommand.Parameters.AddWithValue("@cpf", cpf);
+            mycommand.Parameters.AddWithValue("@nm", name);
+            mycommand.Parameters.AddWithValue("@nasc", nasc);
+            mycommand.Parameters.AddWithValue("@end", end);
+            mycommand.Parameters.AddWithValue("@tel", tel);
+
+            mycommand.ExecuteNonQuery();
+
+            mycon.Close();
+
+        }
+
+        public void delete(object cpf)
+        {
+            mycon.Open();
+            mycommand = new MySqlCommand();
+            mycommand.Connection = mycon;
+            mycommand.CommandText = "delete from paciente where cpf=@cpf;";
+
+            mycommand.Parameters.Clear();
+            mycommand.Parameters.AddWithValue("@cpf", cpf);
+            mycommand.ExecuteNonQuery();
+
             mycon.Close();
         }       
 
@@ -80,5 +117,6 @@ namespace Controle_de_consultorio_odonto.DAO
 
             return array;
         }
+        
     }
 }
