@@ -158,6 +158,7 @@
             this.comboBoxPaciente.Name = "comboBoxPaciente";
             this.comboBoxPaciente.Size = new System.Drawing.Size(259, 21);
             this.comboBoxPaciente.TabIndex = 5;
+            this.comboBoxPaciente.SelectedIndexChanged += new System.EventHandler(this.comboBoxPaciente_SelectedIndexChanged);
             // 
             // groupBoxDtaSla
             // 

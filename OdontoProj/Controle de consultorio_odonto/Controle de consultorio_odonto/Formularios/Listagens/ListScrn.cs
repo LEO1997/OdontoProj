@@ -133,8 +133,9 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
                         for (int i = 0; i < dgv5.Rows.Count - 1; i++)
                         {                           
                             
-                            daoTrat.update(dgv5.Rows[i].Cells[0].Value,                            
-                                           dgv5.Rows[i].Cells[1].Value);                            
+                            daoTrat.update(dgv5.Rows[i].Cells[0].Value,
+                                           dgv5.Rows[i].Cells[1].Value,
+                                           dgv5.Rows[i].Cells[2].Value);                            
                             
                         }                        
 

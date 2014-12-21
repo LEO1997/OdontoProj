@@ -6,26 +6,45 @@ using System.Text;
 namespace Controle_de_consultorio_odonto.Classes_de_entidades
 {
     class Tratamento
-    {
-        int codigo;
+    {        
         string laudo;
-        string title;
-        private double precoIntegral;
+        string titulo;
+        string paciente;
+        private double precoIntegral;     
 
-        public Tratamento(String ld)
-        {
-            this.laudo = ld;
-        }
-
-        public string Title
+        public string Laudo
         {
             get
             {
-                return this.Title;
+                return this.laudo;
             }
             set
             {
-                this.Title = value;
+                this.laudo = value;
+            }
+        }
+
+        public string Titulo
+        {
+            get
+            {
+                return this.titulo;
+            }
+            set
+            {
+                this.titulo = value;
+            }
+        }
+
+        public string Paciente
+        {
+            get
+            {
+                return this.paciente;
+            }
+            set
+            {
+                this.paciente = value;
             }
         }
 

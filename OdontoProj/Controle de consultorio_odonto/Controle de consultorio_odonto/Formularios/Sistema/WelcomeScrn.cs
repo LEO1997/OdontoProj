@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Controle_de_consultorio_odonto.Formularios.Listagens;
+using Controle_de_consultorio_odonto.Formularios.Cadastros;
 
 namespace Controle_de_consultorio_odonto.Formularios.Sistema
 {
@@ -86,6 +87,12 @@ namespace Controle_de_consultorio_odonto.Formularios.Sistema
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void novoTratamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cadastro_tratamento cadTrat = new Cadastro_tratamento();
+              cadTrat.Show();
         }
 
        

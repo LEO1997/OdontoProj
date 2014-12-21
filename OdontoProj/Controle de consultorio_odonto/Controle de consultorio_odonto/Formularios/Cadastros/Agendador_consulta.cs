@@ -86,6 +86,11 @@ namespace Controle_de_consultorio_odonto
         private void Agendador_consulta_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBoxPaciente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }        
         
 
