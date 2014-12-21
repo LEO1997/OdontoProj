@@ -147,77 +147,84 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
 
 
         private void toolStripButton1_Click_2(object sender, EventArgs e)
-        {                     
+        {
 
-            switch (tabControl.SelectedTab.Name)
-            {
+           DialogResult msbResult = MessageBox.Show("Tem certeza que deseja deletar este item?", "Deletar item", 
+                             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                //Excluir de pacientes.
-                case "tabPagePac":
+           if (msbResult.Equals(DialogResult.Yes))
+           {
 
-                    DaoPaciente daoPac = new DaoPaciente();
+               switch (tabControl.SelectedTab.Name)
+               {
 
-                    for (int i = 0; i < dgv1.SelectedRows.Count; i++)
-                    {
-                        daoPac.delete(dgv1.SelectedRows[0].Cells[0].Value);                        
-                    }
-                    dgvLoad(dgv1);
+                   //Excluir de pacientes.
+                   case "tabPagePac":
 
-                    break;
+                       DaoPaciente daoPac = new DaoPaciente();
 
-                //Excluir de profissionais.
-                case "tabPageProf":
+                       for (int i = 0; i < dgv1.SelectedRows.Count; i++)
+                       {
+                           daoPac.delete(dgv1.SelectedRows[0].Cells[0].Value);
+                       }
+                       dgvLoad(dgv1);
 
-                    DaoProf daoProf = new DaoProf();
+                       break;
 
-                    for (int i = 0; i < dgv2.SelectedRows.Count; i++)
-                    {
-                        daoProf.delete(dgv2.SelectedRows[i].Cells[0].Value);                                                
-                    }
-                    dgvLoad(dgv2);
+                   //Excluir de profissionais.
+                   case "tabPageProf":
 
-                    break;
+                       DaoProf daoProf = new DaoProf();
 
-                //Excluir de serviço.
-                case "tabPageServ":
+                       for (int i = 0; i < dgv2.SelectedRows.Count; i++)
+                       {
+                           daoProf.delete(dgv2.SelectedRows[i].Cells[0].Value);
+                       }
+                       dgvLoad(dgv2);
 
-                    DaoServico daoServ = new DaoServico();
+                       break;
 
-                    for (int i = 0; i < dgv3.SelectedRows.Count; i++)
-                    {
-                        daoServ.delete(dgv3.SelectedRows[i].Cells[0].Value);
-                    }
-                    dgvLoad(dgv3);
+                   //Excluir de serviço.
+                   case "tabPageServ":
 
-                    break;
+                       DaoServico daoServ = new DaoServico();
 
-                //Excluir de consultas.
-                case "tabPageCons":
+                       for (int i = 0; i < dgv3.SelectedRows.Count; i++)
+                       {
+                           daoServ.delete(dgv3.SelectedRows[i].Cells[0].Value);
+                       }
+                       dgvLoad(dgv3);
 
-                    DaoConsulta daoCons = new DaoConsulta();
+                       break;
 
-                    for (int i = 0; i < dgv4.SelectedRows.Count; i++)
-                    {
-                        daoCons.delete(dgv4.SelectedRows[i].Cells[0].Value);                        
-                    }
-                    dgvLoad(dgv4);
-                  
+                   //Excluir de consultas.
+                   case "tabPageCons":
 
-                    break;
+                       DaoConsulta daoCons = new DaoConsulta();
 
-                //Excluir de tratamentos.
-                case "tabPageTrat":
+                       for (int i = 0; i < dgv4.SelectedRows.Count; i++)
+                       {
+                           daoCons.delete(dgv4.SelectedRows[i].Cells[0].Value);
+                       }
+                       dgvLoad(dgv4);
 
-                    DaoTratamento daoTrat = new DaoTratamento();
 
-                    for (int i = 0; i < dgv5.SelectedRows.Count; i++)
-                    {
-                        daoTrat.delete(dgv5.SelectedRows[i].Cells[0].Value);                        
-                    }
-                    dgvLoad(dgv5);
+                       break;
 
-                    break;
-            }
+                   //Excluir de tratamentos.
+                   case "tabPageTrat":
+
+                       DaoTratamento daoTrat = new DaoTratamento();
+
+                       for (int i = 0; i < dgv5.SelectedRows.Count; i++)
+                       {
+                           daoTrat.delete(dgv5.SelectedRows[i].Cells[0].Value);
+                       }
+                       dgvLoad(dgv5);
+
+                       break;
+               }
+           }
         }
 
 

@@ -58,3 +58,4 @@ C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Formularios.Sistema.WelcomeScrn.resources
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Formularios.Listagens.ListScrn.resources
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Formularios.Cadastros.Cadastro_tratamento.resources
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Formularios.Listagens.SelectTratamentoScrn.resources

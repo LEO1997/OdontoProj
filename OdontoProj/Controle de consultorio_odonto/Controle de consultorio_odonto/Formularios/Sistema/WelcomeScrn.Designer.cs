@@ -32,20 +32,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gerarBoletoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tratamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoTratamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adicionarConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.serviçosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.profissionaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.profissionaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.serviçosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.pictBoxSchedule = new System.Windows.Forms.PictureBox();
             this.pictBoxSearch = new System.Windows.Forms.PictureBox();
-            this.gerarBoletoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tratamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novoTratamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -87,11 +87,49 @@
             this.MenuItem1.Text = "Opções";
             this.MenuItem1.Click += new System.EventHandler(this.MenuItem1_Click);
             // 
+            // gerarBoletoToolStripMenuItem
+            // 
+            this.gerarBoletoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.gerarBoletoToolStripMenuItem.Name = "gerarBoletoToolStripMenuItem";
+            this.gerarBoletoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gerarBoletoToolStripMenuItem.Text = "Gerar Boleto";
+            // 
+            // tratamentosToolStripMenuItem
+            // 
+            this.tratamentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoTratamentoToolStripMenuItem,
+            this.adicionarConsultasToolStripMenuItem});
+            this.tratamentosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.tratamentosToolStripMenuItem.Name = "tratamentosToolStripMenuItem";
+            this.tratamentosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tratamentosToolStripMenuItem.Text = "Tratamentos";
+            // 
+            // novoTratamentoToolStripMenuItem
+            // 
+            this.novoTratamentoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.novoTratamentoToolStripMenuItem.Name = "novoTratamentoToolStripMenuItem";
+            this.novoTratamentoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.novoTratamentoToolStripMenuItem.Text = "Novo Tratamento";
+            this.novoTratamentoToolStripMenuItem.Click += new System.EventHandler(this.novoTratamentoToolStripMenuItem_Click);
+            // 
+            // adicionarConsultasToolStripMenuItem
+            // 
+            this.adicionarConsultasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.adicionarConsultasToolStripMenuItem.Name = "adicionarConsultasToolStripMenuItem";
+            this.adicionarConsultasToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.adicionarConsultasToolStripMenuItem.Text = "Adicionar consultas";
+            this.adicionarConsultasToolStripMenuItem.Click += new System.EventHandler(this.adicionarConsultasToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -106,13 +144,13 @@
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
-            // serviçosToolStripMenuItem
+            // pacientesToolStripMenuItem
             // 
-            this.serviçosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.serviçosToolStripMenuItem.Name = "serviçosToolStripMenuItem";
-            this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.serviçosToolStripMenuItem.Text = "Serviços";
-            this.serviçosToolStripMenuItem.Click += new System.EventHandler(this.serviçosToolStripMenuItem_Click);
+            this.pacientesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pacientesToolStripMenuItem.Name = "pacientesToolStripMenuItem";
+            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.pacientesToolStripMenuItem.Text = "Pacientes";
+            this.pacientesToolStripMenuItem.Click += new System.EventHandler(this.pacientesToolStripMenuItem_Click);
             // 
             // profissionaisToolStripMenuItem
             // 
@@ -122,13 +160,13 @@
             this.profissionaisToolStripMenuItem.Text = "Profissionais";
             this.profissionaisToolStripMenuItem.Click += new System.EventHandler(this.profissionaisToolStripMenuItem_Click);
             // 
-            // pacientesToolStripMenuItem
+            // serviçosToolStripMenuItem
             // 
-            this.pacientesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.pacientesToolStripMenuItem.Name = "pacientesToolStripMenuItem";
-            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.pacientesToolStripMenuItem.Text = "Pacientes";
-            this.pacientesToolStripMenuItem.Click += new System.EventHandler(this.pacientesToolStripMenuItem_Click);
+            this.serviçosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.serviçosToolStripMenuItem.Name = "serviçosToolStripMenuItem";
+            this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.serviçosToolStripMenuItem.Text = "Serviços";
+            this.serviçosToolStripMenuItem.Click += new System.EventHandler(this.serviçosToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -169,43 +207,6 @@
             this.pictBoxSearch.TabStop = false;
             this.pictBoxSearch.Click += new System.EventHandler(this.pictBoxSearch_Click_1);
             this.pictBoxSearch.MouseHover += new System.EventHandler(this.pictBoxSerch_MouseHover);
-            // 
-            // gerarBoletoToolStripMenuItem
-            // 
-            this.gerarBoletoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.gerarBoletoToolStripMenuItem.Name = "gerarBoletoToolStripMenuItem";
-            this.gerarBoletoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.gerarBoletoToolStripMenuItem.Text = "Gerar Boleto";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
-            // 
-            // tratamentosToolStripMenuItem
-            // 
-            this.tratamentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novoTratamentoToolStripMenuItem,
-            this.adicionarConsultasToolStripMenuItem});
-            this.tratamentosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.tratamentosToolStripMenuItem.Name = "tratamentosToolStripMenuItem";
-            this.tratamentosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.tratamentosToolStripMenuItem.Text = "Tratamentos";
-            // 
-            // novoTratamentoToolStripMenuItem
-            // 
-            this.novoTratamentoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.novoTratamentoToolStripMenuItem.Name = "novoTratamentoToolStripMenuItem";
-            this.novoTratamentoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.novoTratamentoToolStripMenuItem.Text = "Novo Tratamento";
-            this.novoTratamentoToolStripMenuItem.Click += new System.EventHandler(this.novoTratamentoToolStripMenuItem_Click);
-            // 
-            // adicionarConsultasToolStripMenuItem
-            // 
-            this.adicionarConsultasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.adicionarConsultasToolStripMenuItem.Name = "adicionarConsultasToolStripMenuItem";
-            this.adicionarConsultasToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.adicionarConsultasToolStripMenuItem.Text = "Adicionar consultas";
             // 
             // label1
             // 

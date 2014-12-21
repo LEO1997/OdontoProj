@@ -52,12 +52,6 @@
   <ItemGroup>
     <Compile Include="DAO\DaoTratamento.cs" />
     <Compile Include="DAO\DataStore.cs" />
-    <Compile Include="Formularios\Cadastros\AgendadorTratamentos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Cadastros\AgendadorTratamentos.Designer.cs">
-      <DependentUpon>AgendadorTratamentos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Cadastros\Agendador_consulta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +97,12 @@
     <Compile Include="Formularios\Listagens\ListScrn.Designer.cs">
       <DependentUpon>ListScrn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Listagens\SelectTratamentoScrn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listagens\SelectTratamentoScrn.Designer.cs">
+      <DependentUpon>SelectTratamentoScrn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Sistema\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listagens\ListScrn.resx">
       <DependentUpon>ListScrn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listagens\SelectTratamentoScrn.resx">
+      <DependentUpon>SelectTratamentoScrn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Sistema\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

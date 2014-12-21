@@ -13,6 +13,7 @@ namespace Controle_de_consultorio_odonto.Classes_de_entidades
         private string pac;
         private string prof;
         private string serv;
+        private string trat;
 
         public int Codigo
         {
@@ -88,6 +89,19 @@ namespace Controle_de_consultorio_odonto.Classes_de_entidades
             set
             {
                 serv = value;
+            }
+        }
+
+        //
+        public string Trat
+        {
+            get
+            {
+                return trat;
+            }
+            set
+            {
+                this.trat = value;
             }
         }
     }

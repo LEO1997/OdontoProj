@@ -5,6 +5,7 @@ using System.Text;
 using MySql.Data.MySqlClient;
 using System.Data;
 using Controle_de_consultorio_odonto.Classes_de_entidades;
+using System.Collections;
 
 namespace Controle_de_consultorio_odonto.DAO
 {
@@ -12,6 +13,7 @@ namespace Controle_de_consultorio_odonto.DAO
     {
         private MySqlConnection mycon;//variável que estabelece conexão com o bd;
         private MySqlCommand mycommand;//armazena o comando a ser executado;
+        private MySqlDataReader mydr;
 
         public DaoTratamento()
         {
@@ -71,7 +73,30 @@ namespace Controle_de_consultorio_odonto.DAO
             mycommand.ExecuteNonQuery();
 
             mycon.Close();
-        }      
+        }
+
+        public ArrayList list(string nomePac)
+        {
+            ArrayList array = new ArrayList();//arraylist para retorno dos valores(titulos).
+
+            mycon.Open();
+
+            mycommand = new MySqlCommand();
+            mycommand.Connection = mycon;
+            mycommand.CommandText = "Select * from Tratamento where Paciente_cpf=" +
+                                    "(select cpf from paciente where nome=@nm);";
+            mycommand.Parameters.AddWithValue("@nm", nomePac);
+
+            mydr = mycommand.ExecuteReader();
+            while (mydr.Read())
+            {
+                array.Add(mydr.GetString("titulo"));//Adiciona os valores nome de cada instância da entidade Tratamento.
+            }
+
+            mycon.Close();
+
+            return array;
+        }
 
 
     }   

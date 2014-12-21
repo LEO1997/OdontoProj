@@ -82,12 +82,7 @@ namespace Controle_de_consultorio_odonto.Formularios.Sistema
             ToolTip toolTipSchedule = new ToolTip();
             toolTipSchedule.SetToolTip(this.pictBoxSchedule, "Agendamento de consultas");
         }       
-//ToolStripMenuItens de Cadastro------------------------------------------------------------------||
-
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+//ToolStripMenuItens de Cadastro------------------------------------------------------------------||        
 
         private void novoTratamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -95,6 +90,19 @@ namespace Controle_de_consultorio_odonto.Formularios.Sistema
               cadTrat.Show();
         }
 
+
+//ToolStripMenuItens de Adição de consultas------------------------------------------------------------------||        
+        private void adicionarConsultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectTratamentoScrn sts = new SelectTratamentoScrn();
+            sts.Show();
+        }
+
+//ToolStripMenuItens de saída do sistema----------------------------------------------------------||        
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }        
        
         
     }

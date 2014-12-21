@@ -42,8 +42,11 @@
             this.labelDta = new System.Windows.Forms.Label();
             this.labelServ1 = new System.Windows.Forms.Label();
             this.comboBoxServ1 = new System.Windows.Forms.ComboBox();
+            this.groupBoxTrat = new System.Windows.Forms.GroupBox();
+            this.labelTrat = new System.Windows.Forms.Label();
             this.groupBoxPacMed.SuspendLayout();
             this.groupBoxDtaSla.SuspendLayout();
+            this.groupBoxTrat.SuspendLayout();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -51,9 +54,9 @@
             this.dateTimePicker1.CalendarForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dateTimePicker1.Location = new System.Drawing.Point(134, 82);
+            this.dateTimePicker1.Location = new System.Drawing.Point(73, 82);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(168, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(232, 20);
             this.dateTimePicker1.TabIndex = 8;
             // 
             // labelPaciente
@@ -129,7 +132,7 @@
             // buttonAgendar
             // 
             this.buttonAgendar.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.buttonAgendar.Location = new System.Drawing.Point(171, 224);
+            this.buttonAgendar.Location = new System.Drawing.Point(168, 293);
             this.buttonAgendar.Name = "buttonAgendar";
             this.buttonAgendar.Size = new System.Drawing.Size(75, 23);
             this.buttonAgendar.TabIndex = 9;
@@ -181,7 +184,7 @@
             // labelDta
             // 
             this.labelDta.AutoSize = true;
-            this.labelDta.Location = new System.Drawing.Point(67, 88);
+            this.labelDta.Location = new System.Drawing.Point(6, 88);
             this.labelDta.Name = "labelDta";
             this.labelDta.Size = new System.Drawing.Size(61, 13);
             this.labelDta.TabIndex = 7;
@@ -206,12 +209,33 @@
             this.comboBoxServ1.Size = new System.Drawing.Size(121, 21);
             this.comboBoxServ1.TabIndex = 7;
             // 
+            // groupBoxTrat
+            // 
+            this.groupBoxTrat.Controls.Add(this.labelTrat);
+            this.groupBoxTrat.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.groupBoxTrat.Location = new System.Drawing.Point(12, 216);
+            this.groupBoxTrat.Name = "groupBoxTrat";
+            this.groupBoxTrat.Size = new System.Drawing.Size(388, 69);
+            this.groupBoxTrat.TabIndex = 10;
+            this.groupBoxTrat.TabStop = false;
+            this.groupBoxTrat.Text = "Referente a";
+            this.groupBoxTrat.Enter += new System.EventHandler(this.groupBoxTrat_Enter);
+            // 
+            // labelTrat
+            // 
+            this.labelTrat.AutoSize = true;
+            this.labelTrat.Location = new System.Drawing.Point(175, 28);
+            this.labelTrat.Name = "labelTrat";
+            this.labelTrat.Size = new System.Drawing.Size(0, 13);
+            this.labelTrat.TabIndex = 0;
+            // 
             // Agendador_consulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(417, 259);
+            this.ClientSize = new System.Drawing.Size(424, 328);
+            this.Controls.Add(this.groupBoxTrat);
             this.Controls.Add(this.groupBoxDtaSla);
             this.Controls.Add(this.groupBoxPacMed);
             this.Controls.Add(this.buttonAgendar);
@@ -225,6 +249,8 @@
             this.groupBoxPacMed.PerformLayout();
             this.groupBoxDtaSla.ResumeLayout(false);
             this.groupBoxDtaSla.PerformLayout();
+            this.groupBoxTrat.ResumeLayout(false);
+            this.groupBoxTrat.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -244,6 +270,8 @@
         private System.Windows.Forms.ComboBox comboBoxPaciente;
         private System.Windows.Forms.ComboBox comboBoxServ1;
         private System.Windows.Forms.Label labelServ1;
+        private System.Windows.Forms.GroupBox groupBoxTrat;
+        private System.Windows.Forms.Label labelTrat;
 
 
         public System.EventHandler comboBoxServ1_SelectedIndexChanged { get; set; }
