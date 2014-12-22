@@ -36,7 +36,8 @@ namespace Controle_de_consultorio_odonto
 
             if (cpf.Equals("") || nome.Equals("") || nascimento.Equals("") || endereco.Equals(""))
             {
-                MessageBox.Show("Preencha corretamente todos os campos!");
+                MessageBox.Show("Preencha todos os campos corretamente", "Erro de validação",
+                                          MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
             else

@@ -65,6 +65,8 @@ namespace Controle_de_consultorio_odonto.DAO
             mycommand.Parameters.Clear();
             mycommand.Parameters.AddWithValue("@cod", cod);
             mycommand.ExecuteNonQuery();
+
+            mycon.Close();
         }        
 
         public ArrayList listar()

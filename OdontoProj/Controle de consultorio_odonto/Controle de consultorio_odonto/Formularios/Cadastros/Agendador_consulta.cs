@@ -58,7 +58,8 @@ namespace Controle_de_consultorio_odonto
             if (paciente.Equals("") || profissional.Equals("") || sala.Equals(0) || dtaHr.Equals("")
                 || (servico1.Equals("")))
             {
-                MessageBox.Show("Preencha corretamente todos os campos!");
+                MessageBox.Show("Preencha todos os campos corretamente", "Erro de validação",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation); ;
 
             }
             else
@@ -83,7 +84,7 @@ namespace Controle_de_consultorio_odonto
             //Recebe valores das entidades do banco e exibe nas devidas comboboxes.
             DaoPaciente daoPac = new DaoPaciente();
             ComboBox combpac = comboBoxPaciente;
-            combpac.DataSource = daoPac.listar();//Pega as instâncias de Paciente.
+            combpac.DataSource = daoPac.list();//Pega as instâncias de Paciente.
             combpac.DisplayMember = "nome";//Exibe apenas o valor de nome das instâncias.
 
             DaoProf daoProf = new DaoProf();

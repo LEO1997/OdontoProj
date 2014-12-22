@@ -97,17 +97,23 @@
     <Compile Include="Formularios\Listagens\ListScrn.Designer.cs">
       <DependentUpon>ListScrn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Listagens\SelectPacienteScrn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listagens\SelectPacienteScrn.Designer.cs">
+      <DependentUpon>SelectPacienteScrn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Listagens\SelectTratamentoScrn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Listagens\SelectTratamentoScrn.Designer.cs">
       <DependentUpon>SelectTratamentoScrn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Sistema\Form1.cs">
+    <Compile Include="Formularios\Sistema\HelpScrn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Sistema\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Formularios\Sistema\HelpScrn.Designer.cs">
+      <DependentUpon>HelpScrn.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Sistema\PasswordScrn.cs">
       <SubType>Form</SubType>
@@ -123,12 +129,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Formularios\Listagens\TelaLista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Listagens\TelaLista.Designer.cs">
-      <DependentUpon>TelaLista.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Formularios\Cadastros\Agendador_consulta.resx">
       <DependentUpon>Agendador_consulta.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,11 +147,14 @@
     <EmbeddedResource Include="Formularios\Listagens\ListScrn.resx">
       <DependentUpon>ListScrn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listagens\SelectPacienteScrn.resx">
+      <DependentUpon>SelectPacienteScrn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listagens\SelectTratamentoScrn.resx">
       <DependentUpon>SelectTratamentoScrn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Sistema\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Sistema\HelpScrn.resx">
+      <DependentUpon>HelpScrn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Sistema\PasswordScrn.resx">
       <DependentUpon>PasswordScrn.cs</DependentUpon>
@@ -168,9 +171,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Formularios\Listagens\TelaLista.resx">
-      <DependentUpon>TelaLista.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -100,7 +100,6 @@
             this.MaximizeBox = false;
             this.Name = "SelectTratamentoScrn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SelectTratamentoScrn";
             this.Load += new System.EventHandler(this.SelectTratamentoScrn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

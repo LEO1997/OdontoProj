@@ -98,12 +98,26 @@ namespace Controle_de_consultorio_odonto.Formularios.Sistema
             sts.Show();
         }
 
+//ToolStripMenuItens de impressão com os dados do paciente---------------------------------------------------||        
+        private void gerarBoletoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectPacienteScrn spsc = new SelectPacienteScrn();
+            spsc.Show();
+        }
+
+
+//ToolStripMenuItem de ajuda------------------------------------------------------------------------||        
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            HelpScrn helpScrn = new HelpScrn();
+            helpScrn.Show();
+        }    
+
 //ToolStripMenuItens de saída do sistema----------------------------------------------------------||        
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }        
-       
-        
+        }            
+               
     }
 }

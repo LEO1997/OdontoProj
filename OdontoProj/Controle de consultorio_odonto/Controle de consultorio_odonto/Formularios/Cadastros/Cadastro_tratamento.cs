@@ -27,7 +27,7 @@ namespace Controle_de_consultorio_odonto.Formularios.Cadastros
         {
             DaoPaciente daoPac = new DaoPaciente();
             ComboBox combpac = comboBoxPac;
-            combpac.DataSource = daoPac.listar();//Pega as instâncias de Paciente.
+            combpac.DataSource = daoPac.list();//Pega as instâncias de Paciente.
             combpac.DisplayMember = "nome";
         }
 
@@ -40,13 +40,15 @@ namespace Controle_de_consultorio_odonto.Formularios.Cadastros
 
             if (titulo.Equals("") || paciente.Equals(""))
             {
-                MessageBox.Show("Preencha corretamente todos os campos.");
+                MessageBox.Show("Preencha todos os campos corretamente", "Erro de validação",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation); ;
             }
             else
             {
                 if (laudo.Equals("") || laudo.Length < 30)
                 {
-                    MessageBox.Show("Informe o laudo para liberar o tratamento.");
+                    MessageBox.Show("Informe o laudo para liberar o tratamento.", "Erro de validação",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation); ;                  
                 }
                 else
                 {

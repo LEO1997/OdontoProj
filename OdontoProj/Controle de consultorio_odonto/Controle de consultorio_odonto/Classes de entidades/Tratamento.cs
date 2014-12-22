@@ -9,8 +9,7 @@ namespace Controle_de_consultorio_odonto.Classes_de_entidades
     {        
         string laudo;
         string titulo;
-        string paciente;
-        private double precoIntegral;     
+        string paciente;         
 
         public string Laudo
         {

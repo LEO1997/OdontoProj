@@ -74,7 +74,7 @@ namespace Controle_de_consultorio_odonto.DAO
             mycon.Close();
         }       
 
-        public ArrayList listar()
+        public ArrayList list()
         {            
             ArrayList array = new ArrayList();//arraylist para retorno dos valores(nomes).
                  

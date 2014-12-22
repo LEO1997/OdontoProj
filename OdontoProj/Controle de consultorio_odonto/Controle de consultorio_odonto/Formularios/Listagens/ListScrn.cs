@@ -43,11 +43,7 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
         {
 
         }
-
-        private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
         
         private void toolStripButton1_Click_1(object sender, EventArgs e)
@@ -286,7 +282,7 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
             dt.Load(dtr, LoadOption.OverwriteChanges);
                         
             return dt;           
-        }        
-      
+        }
+        
     }
 }

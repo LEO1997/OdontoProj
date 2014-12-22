@@ -189,7 +189,7 @@
             // 
             this.maskedTextBoxTel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.maskedTextBoxTel.Location = new System.Drawing.Point(9, 65);
-            this.maskedTextBoxTel.Mask = "0000-9999";
+            this.maskedTextBoxTel.Mask = "(00)0000-9999";
             this.maskedTextBoxTel.Name = "maskedTextBoxTel";
             this.maskedTextBoxTel.Size = new System.Drawing.Size(87, 20);
             this.maskedTextBoxTel.TabIndex = 5;

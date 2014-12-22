@@ -81,9 +81,10 @@
             this.tratamentosToolStripMenuItem,
             this.toolStripSeparator1,
             this.sairToolStripMenuItem});
+            this.MenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuItem1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.MenuItem1.Name = "MenuItem1";
-            this.MenuItem1.Size = new System.Drawing.Size(59, 20);
+            this.MenuItem1.Size = new System.Drawing.Size(60, 20);
             this.MenuItem1.Text = "Opções";
             this.MenuItem1.Click += new System.EventHandler(this.MenuItem1_Click);
             // 
@@ -92,7 +93,8 @@
             this.gerarBoletoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.gerarBoletoToolStripMenuItem.Name = "gerarBoletoToolStripMenuItem";
             this.gerarBoletoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.gerarBoletoToolStripMenuItem.Text = "Gerar Boleto";
+            this.gerarBoletoToolStripMenuItem.Text = "Gerar boleto";
+            this.gerarBoletoToolStripMenuItem.Click += new System.EventHandler(this.gerarBoletoToolStripMenuItem_Click);
             // 
             // tratamentosToolStripMenuItem
             // 
@@ -108,7 +110,7 @@
             // 
             this.novoTratamentoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.novoTratamentoToolStripMenuItem.Name = "novoTratamentoToolStripMenuItem";
-            this.novoTratamentoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.novoTratamentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.novoTratamentoToolStripMenuItem.Text = "Novo Tratamento";
             this.novoTratamentoToolStripMenuItem.Click += new System.EventHandler(this.novoTratamentoToolStripMenuItem_Click);
             // 
@@ -116,7 +118,7 @@
             // 
             this.adicionarConsultasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.adicionarConsultasToolStripMenuItem.Name = "adicionarConsultasToolStripMenuItem";
-            this.adicionarConsultasToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.adicionarConsultasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.adicionarConsultasToolStripMenuItem.Text = "Adicionar consultas";
             this.adicionarConsultasToolStripMenuItem.Click += new System.EventHandler(this.adicionarConsultasToolStripMenuItem_Click);
             // 
@@ -139,16 +141,17 @@
             this.pacientesToolStripMenuItem,
             this.profissionaisToolStripMenuItem,
             this.serviçosToolStripMenuItem});
+            this.cadastroToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cadastroToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
             // pacientesToolStripMenuItem
             // 
             this.pacientesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.pacientesToolStripMenuItem.Name = "pacientesToolStripMenuItem";
-            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pacientesToolStripMenuItem.Text = "Pacientes";
             this.pacientesToolStripMenuItem.Click += new System.EventHandler(this.pacientesToolStripMenuItem_Click);
             // 
@@ -156,7 +159,7 @@
             // 
             this.profissionaisToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.profissionaisToolStripMenuItem.Name = "profissionaisToolStripMenuItem";
-            this.profissionaisToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.profissionaisToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.profissionaisToolStripMenuItem.Text = "Profissionais";
             this.profissionaisToolStripMenuItem.Click += new System.EventHandler(this.profissionaisToolStripMenuItem_Click);
             // 
@@ -164,16 +167,18 @@
             // 
             this.serviçosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.serviçosToolStripMenuItem.Name = "serviçosToolStripMenuItem";
-            this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.serviçosToolStripMenuItem.Text = "Serviços";
             this.serviçosToolStripMenuItem.Click += new System.EventHandler(this.serviçosToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
             this.toolStripMenuItem1.Text = "?";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // label2
             // 

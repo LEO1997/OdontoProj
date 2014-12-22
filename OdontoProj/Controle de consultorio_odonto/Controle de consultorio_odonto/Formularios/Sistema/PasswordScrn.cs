@@ -37,7 +37,7 @@ namespace Controle_de_consultorio_odonto.Formularios
             }
             catch
             {
-                MessageBox.Show("SENHA DE ACESSO INCORRETA");
+                MessageBox.Show("SENHA DE ACESSO INCORRETA", "Erro ao fazer login", MessageBoxButtons.OK , MessageBoxIcon.Error);
                 textBoxPass.Text = "";
                 textBoxPass.Focus();
             }

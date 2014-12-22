@@ -9,8 +9,7 @@ using Controle_de_consultorio_odonto.Formularios.Listagens;
 namespace Controle_de_consultorio_odonto
 {
     static class Program
-    {
-        static string password;
+    {      
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

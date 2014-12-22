@@ -48,9 +48,7 @@ C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_profss.resources
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_paciente.resources
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Cadastro_servicos.resources
-C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Tela_main.resources
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Properties.Resources.resources
-C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.TelaLista.resources
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle de consultorio_odonto.csproj.GenerateResource.Cache
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Formularios.PasswordScrn.resources
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\bin\Debug\Controle de consultorio_odonto.exe
@@ -59,3 +57,5 @@ C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Formularios.Listagens.ListScrn.resources
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Formularios.Cadastros.Cadastro_tratamento.resources
 C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Formularios.Listagens.SelectTratamentoScrn.resources
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Formularios.Listagens.SelectPacienteScrn.resources
+C:\Users\leonp_000\Documents\Projetos com git\OdontoProj\Controle de consultorio_odonto\Controle de consultorio_odonto\obj\x86\Debug\Controle_de_consultorio_odonto.Formularios.Sistema.HelpScrn.resources

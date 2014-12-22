@@ -38,7 +38,8 @@ namespace Controle_de_consultorio_odonto
 
             if (desc.Equals("") || preco.Equals(0))
             {
-                MessageBox.Show("Preencha corretamente todos os campos!");
+                MessageBox.Show("Preencha todos os campos corretamente", "Erro de validação",
+                                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
             else

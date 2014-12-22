@@ -21,7 +21,7 @@ namespace Controle_de_consultorio_odonto.Formularios.Listagens
         {
             DaoPaciente daoPac = new DaoPaciente();
             ComboBox combpac = comboBoxPac;
-            combpac.DataSource = daoPac.listar();//Pega as instâncias de Paciente.
+            combpac.DataSource = daoPac.list();//Pega as instâncias de Paciente.
             combpac.DisplayMember = "nome";
         }
 
